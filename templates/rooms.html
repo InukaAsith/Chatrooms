@@ -239,7 +239,7 @@
             const room = msg; 
             document.querySelector("#no-room-info")?.remove();
             const roomContainer = document.createElement('div');
-            roomContainer.className = 'room-container md:min-w-[400px] md:w-[60vw] w-[97%] py-4 px-5 rounded-lg mt-2 ml-1 md:py-11 md:px-14 md:rounded-[30px] cursor-default shadow-md bg-[#f9f9f9] dark:bg-[#252c44] hover:bg-slate-200 dark:hover:bg-[#6d789bbb] transition-colors ease-in-out duration-100';
+            roomContainer.className = 'dark:text-slate-200 room-container lg:min-w-[400px] lg:w-[70vw] w-[97%] py-4 px-5 rounded-lg mt-2 ml-1 lg:py-6 lg:px-14 lg:rounded-2xl shadow-md bg-[#f9f9f9] dark:bg-[#252c44] hover:bg-slate-200 dark:hover:bg-[#6d789bbb] transition-colors ease-in-out duration-100';
             roomContainer.onclick = function(event){ 
                 callRoom(event, `/room/${room.id}`); 
             };
@@ -252,7 +252,7 @@
             nameAndCountSpan.className = 'text-center';
         
             const roomName = document.createElement('h1');
-            roomName.className = 'inline-block text-large md:text-3xl font-semibold dark:text-zinc-200 text-zinc-700';
+            roomName.className = 'inline-block text-large lg:text-3xl font-semibold dark:text-zinc-200 text-zinc-700';
             roomName.textContent = room.name;
         
             const count = document.createElement('h2');
@@ -266,7 +266,7 @@
             containerRoomDetails.className = 'flex items-center container-room-details';
         
             const participants = document.createElement('span');
-            participants.className = 'px-1 mb-1 mr-2 md:mr-5 shadow-sm rounded-3xl bg-slate-100 dark:bg-slate-600';
+            participants.className = 'px-1 mb-1 mr-2 lg:mr-5 shadow-sm rounded-3xl bg-slate-100 dark:bg-slate-600';
         
             const participantsIcon = document.createElement('img');
             participantsIcon.className = 'inline-block w-4 h-4 dark:invert';
@@ -283,11 +283,11 @@
             const author = document.createElement('span');
         
             const authorIcon = document.createElement('h3');
-            authorIcon.className = 'px-2 md:px-4 mb-1 text-sm md:text-sm text-white rounded-full bg-slate-500 opacity-90';
+            authorIcon.className = 'px-2 lg:px-4 mb-1 text-sm lg:text-sm text-white rounded-full bg-slate-500 opacity-90';
             authorIcon.textContent = `@${room.author.username}`;
         
             const authorName = document.createElement('h4');
-            authorName.className = 'mt-2 text-xs md:text-sm text-center text-zinc-800';
+            authorName.className = 'mt-2 text-xs lg:text-sm text-center text-zinc-800';
             authorName.textContent = new Date(room.created).toLocaleString('en-US', { month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' });
         
             author.appendChild(authorIcon);
@@ -314,5 +314,4 @@
     }
     
 </script>
-
 
