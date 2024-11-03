@@ -1,0 +1,1769 @@
+[
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "IntegerField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DateField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SelectField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "TextAreaField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "RadioField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "IntegerField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DateField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SelectField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "TextAreaField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "RadioField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "FileAllowed",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {}
+    },
+    {
+        "label": "FileField",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {}
+    },
+    {
+        "label": "FileAllowed",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {}
+    },
+    {
+        "label": "FileField",
+        "importPath": "flask_wtf.file",
+        "description": "flask_wtf.file",
+        "isExtraImport": true,
+        "detail": "flask_wtf.file",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Rooms",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Messages",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Room",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Messages",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_from_directory",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "URLSafeTimedSerializer",
+        "importPath": "itsdangerous",
+        "description": "itsdangerous",
+        "isExtraImport": true,
+        "detail": "itsdangerous",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "FileUploadFailed",
+        "importPath": "upload",
+        "description": "upload",
+        "isExtraImport": true,
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "upload_file",
+        "importPath": "upload",
+        "description": "upload",
+        "isExtraImport": true,
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "FileUploadFailed",
+        "importPath": "upload",
+        "description": "upload",
+        "isExtraImport": true,
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "upload_file",
+        "importPath": "upload",
+        "description": "upload",
+        "isExtraImport": true,
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "flask_mail",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "detail": "flask_mail",
+        "documentation": {}
+    },
+    {
+        "label": "Mail",
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "isExtraImport": true,
+        "detail": "flask_mail",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "flask_mail",
+        "description": "flask_mail",
+        "isExtraImport": true,
+        "detail": "flask_mail",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "auth_bp",
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "isExtraImport": true,
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "mail",
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "isExtraImport": true,
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "Migrate",
+        "importPath": "flask_migrate",
+        "description": "flask_migrate",
+        "isExtraImport": true,
+        "detail": "flask_migrate",
+        "documentation": {}
+    },
+    {
+        "label": "SocketIO",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "emit",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "send",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "join_room",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "leave_room",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "MessageForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "RoomEditForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "RoomForm",
+        "importPath": "forms",
+        "description": "forms",
+        "isExtraImport": true,
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary",
+        "description": "cloudinary",
+        "detail": "cloudinary",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.uploader",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.uploader",
+        "description": "cloudinary.uploader",
+        "detail": "cloudinary.uploader",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "isExtraImport": true,
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "isExtraImport": true,
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "FileUpload",
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "isExtraImport": true,
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "isExtraImport": true,
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "AgeValidator",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class AgeValidator:\n    def __call__(self, form, field):\n        age = field.data\n        if not age or age<9 or age > 100:\n            raise ValidationError(\"Enter a valid age range\")\nclass PasswordValidator:\n    def __call__(self, form, field):\n            if not (len(field.data) >= 8 or len(field.data) <=12) or not any(char.isdigit() for char in field.data) or not any(char.isupper() for char in field.data) or not any(char.islower() for char in field.data) or not any(not char.isalnum() for char in field.data):\n                raise ValidationError(\"Password must be 8-12 characters long and must contain at least a lowercase letter, uppercase letter, a number and a symbol\")\nclass EmailValidator:",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordValidator",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class PasswordValidator:\n    def __call__(self, form, field):\n            if not (len(field.data) >= 8 or len(field.data) <=12) or not any(char.isdigit() for char in field.data) or not any(char.isupper() for char in field.data) or not any(char.islower() for char in field.data) or not any(not char.isalnum() for char in field.data):\n                raise ValidationError(\"Password must be 8-12 characters long and must contain at least a lowercase letter, uppercase letter, a number and a symbol\")\nclass EmailValidator:\n    def __call__(self, form, field):\n        user = User.query.filter_by(email=field.data.lower()).first()\n        try:\n            if user and user.id != current_user.id:\n                raise ValidationError(\"Email already taken\")",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EmailValidator",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class EmailValidator:\n    def __call__(self, form, field):\n        user = User.query.filter_by(email=field.data.lower()).first()\n        try:\n            if user and user.id != current_user.id:\n                raise ValidationError(\"Email already taken\")\n        except AttributeError as e:\n            raise ValidationError(\"Email already taken\")\nclass UsernameValidator:\n    def __call__(self, form, field):",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UsernameValidator",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class UsernameValidator:\n    def __call__(self, form, field):\n        user = User.query.filter_by(username=field.data.lower()).first()\n        try:\n            if user and user.id != current_user.id:\n                raise ValidationError(\"Username already taken\")\n        except AttributeError as e:\n            raise ValidationError(\"Username already taken\")\nclass PasswordForm(FlaskForm):\n    current_password = PasswordField('Current Password', validators=[DataRequired()])",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class PasswordForm(FlaskForm):\n    current_password = PasswordField('Current Password', validators=[DataRequired()])\n    new_password = PasswordField('New Password', validators=[DataRequired(), PasswordValidator()])\n    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('new_password')])\n    submit = SubmitField(\"Change Password\")\nclass DeleteForm(FlaskForm):\n    password = PasswordField(\"Password\", validators=[DataRequired()])\n    submit = SubmitField('Submit')\nclass EditForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired(), Length(min=4, max=16)])",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class DeleteForm(FlaskForm):\n    password = PasswordField(\"Password\", validators=[DataRequired()])\n    submit = SubmitField('Submit')\nclass EditForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired(), Length(min=4, max=16)])\n    username = StringField('Username', validators=[DataRequired(), Length(min=4, max=16), UsernameValidator()])\n    age = IntegerField(\"Age\", validators=[DataRequired(), AgeValidator()])\n    email = StringField(\"Email\", validators=[DataRequired(), Email(), EmailValidator()])\n    bio = TextAreaField(\"About Me\")\n    gender = SelectField(\"Select your Gender\", choices=[",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EditForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class EditForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired(), Length(min=4, max=16)])\n    username = StringField('Username', validators=[DataRequired(), Length(min=4, max=16), UsernameValidator()])\n    age = IntegerField(\"Age\", validators=[DataRequired(), AgeValidator()])\n    email = StringField(\"Email\", validators=[DataRequired(), Email(), EmailValidator()])\n    bio = TextAreaField(\"About Me\")\n    gender = SelectField(\"Select your Gender\", choices=[\n        (\"male\",\"👦🏻 Male\"),\n        (\"female\", \"👧🏻 Female\")\n    ])",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "RegistrationForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class RegistrationForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired(), Length(min=4, max=16)])\n    username = StringField('Username', validators=[DataRequired(), Length(min=4, max=16), UsernameValidator()])\n    age = IntegerField(\"Age\", validators=[DataRequired(), AgeValidator()])\n    email = StringField(\"Email\", validators=[DataRequired(), Email(), EmailValidator()])\n    password = PasswordField(\"Password\", validators=[DataRequired(), Length(min=8), PasswordValidator()])\n    confirm_password = PasswordField(\"Confirm Password\", validators=[DataRequired(), EqualTo('password')])\n    bio = TextAreaField(\"About Me\")\n    gender = RadioField(\"Select your Gender\", choices=[\n        (\"male\",\"👦🏻 Male\"),",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    username = StringField(\"Enter Username\", validators=[DataRequired()])\n    password = PasswordField(\"Password\", validators=[DataRequired()])\n    remember = BooleanField(\"Remember me\")\n    submit = SubmitField(\"Login\")\nclass OtpForm(FlaskForm):\n    otp = StringField('Enter OTP code sent to email or use login link in email', validators=[DataRequired(), Length(min=6, max=6, message='OTP Must be 6 characters long')])\n    submit = SubmitField('Check OTP')\nclass UsernameForm(FlaskForm):\n    username = StringField(\"Enter Username\", validators=[DataRequired()])",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "OtpForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class OtpForm(FlaskForm):\n    otp = StringField('Enter OTP code sent to email or use login link in email', validators=[DataRequired(), Length(min=6, max=6, message='OTP Must be 6 characters long')])\n    submit = SubmitField('Check OTP')\nclass UsernameForm(FlaskForm):\n    username = StringField(\"Enter Username\", validators=[DataRequired()])\n    submit = SubmitField(\"Send OTP\")\nclass ResetForm(FlaskForm):\n    new_password = PasswordField(\"Enter new password\", validators=[DataRequired(), PasswordValidator()])\n    confirm_password = PasswordField(\"Confirm new password\", validators=[DataRequired(), EqualTo('new_password')])\n    submit = SubmitField(\"Set Password\")",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UsernameForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class UsernameForm(FlaskForm):\n    username = StringField(\"Enter Username\", validators=[DataRequired()])\n    submit = SubmitField(\"Send OTP\")\nclass ResetForm(FlaskForm):\n    new_password = PasswordField(\"Enter new password\", validators=[DataRequired(), PasswordValidator()])\n    confirm_password = PasswordField(\"Confirm new password\", validators=[DataRequired(), EqualTo('new_password')])\n    submit = SubmitField(\"Set Password\")",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ResetForm",
+        "kind": 6,
+        "importPath": "auth.forms",
+        "description": "auth.forms",
+        "peekOfCode": "class ResetForm(FlaskForm):\n    new_password = PasswordField(\"Enter new password\", validators=[DataRequired(), PasswordValidator()])\n    confirm_password = PasswordField(\"Confirm new password\", validators=[DataRequired(), EqualTo('new_password')])\n    submit = SubmitField(\"Set Password\")",
+        "detail": "auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "peekOfCode": "class User(db.Model, UserMixin):\n    __tablename__ = \"user\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    username=db.Column(db.String(100), nullable=False, unique=True)\n    password_hash = db.Column(db.String(200), nullable=False)\n    age = db.Column(db.Integer)\n    gender = db.Column(db.String(20))\n    email = db.Column(db.String(100), nullable=False, unique=True)\n    otp = db.Column(db.String(6))",
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "kind": 6,
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "peekOfCode": "class Profile(db.Model):\n    __tablename__ = 'profile'\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)\n    bio = db.Column(db.Text)\n    profile_picture = db.relationship('FileUpload', backref=\"profile\", uselist=False, cascade=\"all, delete\")\n    def to_dict(self):\n        return {\n            'user_id': self.user_id,\n            'bio': self.bio,\n            'profile_picture': self.profile_picture.to_dict() if self.profile_picture else None,",
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "FileUpload",
+        "kind": 6,
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "peekOfCode": "class FileUpload(db.Model):\n    __tablename__ = 'file_upload'\n    id = db.Column(db.Integer, primary_key=True)\n    filename=db.Column(db.String(100), nullable=False)\n    upload_time = db.Column(db.DateTime, default=datetime.utcnow)\n    profile_user_id = db.Column(db.Integer, db.ForeignKey('profile.user_id'))\n    def to_dict(self):\n        return {\n            'id': self.id,\n            'filename': self.filename,",
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "auth.models",
+        "description": "auth.models",
+        "peekOfCode": "db = SQLAlchemy()\nclass User(db.Model, UserMixin):\n    __tablename__ = \"user\"\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    username=db.Column(db.String(100), nullable=False, unique=True)\n    password_hash = db.Column(db.String(200), nullable=False)\n    age = db.Column(db.Integer)\n    gender = db.Column(db.String(20))\n    email = db.Column(db.String(100), nullable=False, unique=True)",
+        "detail": "auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def send_email(user, verify=True):\n    token = user.get_confirmation_token()\n    if not current_app.config['MAIL_USERNAME'] or not current_app.config['MAIL_PASSWORD']:\n        session['user_id'] = user.id\n        return\n    try:\n        user.set_otp()\n        db.session.commit()\n        msg = Message('Verify Email',\n                        recipients=[f'{user.email}'], sender=current_app.config['MAIL_USERNAME'])",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "check_otp",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def check_otp():\n    form = OtpForm()\n    if not session.get('user_id'):\n        flash(\"Enable cookies or try email link\", 'failed')\n        return redirect('auth.dashboard')\n    user_id = session.get('user_id')\n    user = User.query.filter_by(id = user_id).first()\n    if request.method == \"POST\":\n        if user.verify_otp(form.otp.data) == True:\n            user.email_verified = True",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_password",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def forgot_password():\n    if not session.get('step'):\n        session['step'] = 1\n    if session['step'] == 1:\n        form = UsernameForm()\n        if request.method == \"POST\":\n            username = form.username.data\n            user = User.query.filter_by(username=username.lower()).first()\n            if not user:\n                user = User.query.filter_by(email=username.lower()).first()",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def login():\n    form = LoginForm()\n    try:\n        if current_user.id:\n            return redirect(url_for('auth.dashboard'))\n    except Exception as e:\n        pass\n    session.pop('step', None)\n    session.pop('user_id', None)\n    if request.method == \"POST\":",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def register():\n    form = RegistrationForm()\n    if request.method==\"POST\":\n        if form.validate_on_submit():\n            name = form.name.data\n            username = form.username.data.lower()\n            password = form.password.data\n            age = form.age.data\n            email = form.email.data.lower()\n            bio = form.bio.data",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def dashboard():\n    return render_template('dashboard.html', user=current_user)\n@auth_bp.route('/logout')\n@login_required\ndef logout():\n    logout_user()\n    session.pop('step', None)\n    session.pop(\"user_id\", None)\n    flash(\"Logged out\", category='success')\n    return redirect(url_for('auth.login'))",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def logout():\n    logout_user()\n    session.pop('step', None)\n    session.pop(\"user_id\", None)\n    flash(\"Logged out\", category='success')\n    return redirect(url_for('auth.login'))\n@auth_bp.route('/edit_profile', methods=[\"POST\", \"GET\"])\n@login_required\ndef edit_profile():\n    user = current_user",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "edit_profile",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def edit_profile():\n    user = current_user\n    if user.profile.bio:\n        user.bio = user.profile.bio\n    form = EditForm(obj=user)\n    if request.method == 'POST':            \n        if form.validate_on_submit():\n            user.name = form.name.data\n            user.username = form.username.data.lower()\n            user.age = form.age.data",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def reset_password():\n    form = PasswordForm()\n    user = current_user\n    if request.method == \"POST\":\n        if not user: \n            flash('Not authorized','failed')\n            return redirect('auth.dashboard')\n        if form.validate_on_submit():\n            if user.check_password(form.current_password.data):\n                user.set_password(form.new_password.data)",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "verify_email",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def verify_email(token):\n    if token:\n        email = User.verify_confirmation_token(token)\n        if email:\n            user = User.query.filter_by(email=email).first()\n            user.email_verified = True\n            db.session.commit()\n            flash('Email verification successful, Please login', 'success')\n            return redirect(url_for('auth.login'))\n    flash('Invalid token','failed')",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "reset_pass",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def reset_pass(token):\n    if token:\n        email = User.verify_confirmation_token(token)\n        if email:\n            user = User.query.filter_by(email=email).first()\n            session['user_id'] = user.id\n            session['step'] = 3\n            return redirect(url_for('auth.forget_password'))\n    flash('Invalid token','failed')\n    return redirect('/')",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "account_delete",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def account_delete():\n    form = DeleteForm()\n    if request.method == \"POST\":\n        user = current_user\n        if user.check_password(form.password.data):\n            try:\n                db.session.delete(user)\n                db.session.commit()\n                logout_user()\n                session.clear()",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "def index():\n    return redirect(url_for('auth.dashboard'))",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "mail",
+        "kind": 5,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "mail = Mail()\nauth_bp = Blueprint('auth', __name__, template_folder=\"templates\")\ndef send_email(user, verify=True):\n    token = user.get_confirmation_token()\n    if not current_app.config['MAIL_USERNAME'] or not current_app.config['MAIL_PASSWORD']:\n        session['user_id'] = user.id\n        return\n    try:\n        user.set_otp()\n        db.session.commit()",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "auth_bp",
+        "kind": 5,
+        "importPath": "auth.routes",
+        "description": "auth.routes",
+        "peekOfCode": "auth_bp = Blueprint('auth', __name__, template_folder=\"templates\")\ndef send_email(user, verify=True):\n    token = user.get_confirmation_token()\n    if not current_app.config['MAIL_USERNAME'] or not current_app.config['MAIL_PASSWORD']:\n        session['user_id'] = user.id\n        return\n    try:\n        user.set_otp()\n        db.session.commit()\n        msg = Message('Verify Email',",
+        "detail": "auth.routes",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskTestRoomCase",
+        "kind": 6,
+        "importPath": "tests.test_rooms",
+        "description": "tests.test_rooms",
+        "peekOfCode": "class FlaskTestRoomCase(unittest.TestCase):\n    def setUp(self):\n        self.app = app.test_client(use_cookies=True)\n        self.app.testing = True\n        self.app_context = app.app_context()\n        testuser = User(name=\"testuser\", username=\"testuser\", password_hash=generate_password_hash(\"testpassword\"), age=20, gender=\"male\", email=\"tester@test.com\", email_verified=1)\n        testuser.profile = Profile(bio=\"test\")\n        db.session.add(testuser)\n        db.session.commit()\n        login_user(testuser, remember=True)",
+        "detail": "tests.test_rooms",
+        "documentation": {}
+    },
+    {
+        "label": "admin_required",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def admin_required(func):\n    @wraps(func)\n    def decorator(room_id=None,*args, **kwargs):\n        if room_id:\n            room = Room.query.get(room_id)\n            if not room:\n                abort(401)\n            if current_user not in room.admins:\n                abort(401)\n            return func(room_id,*args, **kwargs)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def load_user(user_id):\n    return User.query.get(int(user_id))\n@app.after_request\ndef after_request(response):\n    \"\"\"Ensure responses aren't cached\"\"\"\n    response.headers[\"Cache-Control\"] = \"no-cache, no-store, must-revalidate\"\n    response.headers[\"Expires\"] = 0\n    response.headers[\"Pragma\"] = \"no-cache\"\n    return response\n@app.route(\"/\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "after_request",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def after_request(response):\n    \"\"\"Ensure responses aren't cached\"\"\"\n    response.headers[\"Cache-Control\"] = \"no-cache, no-store, must-revalidate\"\n    response.headers[\"Expires\"] = 0\n    response.headers[\"Pragma\"] = \"no-cache\"\n    return response\n@app.route(\"/\")\ndef index():\n    \"\"\"Set theme and load main landing page\"\"\"\n    if not session.get('theme'):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    \"\"\"Set theme and load main landing page\"\"\"\n    if not session.get('theme'):\n        session['theme'] = 1\n    rooms = Room.query.order_by(Room.last_message.desc()).all()\n    return render_template(\"index.html\", rooms=rooms)\n@app.route(\"/students\")\n@login_required\ndef students():\n    students = User.query.all()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "students",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def students():\n    students = User.query.all()\n    return render_template(\"students.html\", students=students)\n@app.route(\"/uploads/<filename>\")\ndef send_file(filename):\n    \"\"\"Send files on uploads directory in case of  inaccessibility due to server limits\"\"\"\n    return send_from_directory(app.config[\"UPLOAD_LOCATION\"], filename)\n@app.route(\"/profile/<int:user_id>\")\n@login_required\ndef profile(user_id):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "send_file",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def send_file(filename):\n    \"\"\"Send files on uploads directory in case of  inaccessibility due to server limits\"\"\"\n    return send_from_directory(app.config[\"UPLOAD_LOCATION\"], filename)\n@app.route(\"/profile/<int:user_id>\")\n@login_required\ndef profile(user_id):\n    \"\"\"user info page\"\"\"\n    user = User.query.get(user_id)\n    return render_template('profile.html', user=user)\n@app.route('/create_room', methods=[\"POST\", \"GET\"])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "profile",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def profile(user_id):\n    \"\"\"user info page\"\"\"\n    user = User.query.get(user_id)\n    return render_template('profile.html', user=user)\n@app.route('/create_room', methods=[\"POST\", \"GET\"])\n@login_required\ndef create_room():\n    \"\"\"Room creation\"\"\"\n    form = RoomForm()\n    if request.method == 'POST':",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_room",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def create_room():\n    \"\"\"Room creation\"\"\"\n    form = RoomForm()\n    if request.method == 'POST':\n        if form.validate_on_submit():\n            name = form.name.data\n            author = current_user\n            room = Room(name=name)\n            photo = form.photo.data\n            room.participants.append(author)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "edit_room",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def edit_room(room_id):\n    \"\"\"Editing room\"\"\"\n    room = Room.query.get(room_id)\n    form = RoomEditForm(obj=room)\n    if request.method == 'POST':\n        if form.validate_on_submit():\n            room.name = form.name.data \n            photo = form.photo.data\n            try:\n                photo_url = upload_file(photo,filename=room.id, path=\"chat_pictures\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "room",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def room(room_id):\n    \"\"\"Load room if not user is banned\"\"\"\n    form = MessageForm()\n    room = Room.query.get(room_id)\n    messages = Messages.query.order_by(Messages.time).filter_by(room_id=room_id).all()\n    rooms = Room.query.order_by(Room.last_message.desc()).all()\n    if current_user in room.banned:\n            flash(\"You are banned from this chat\", \"failed\")\n            return redirect(request.referrer)\n    return render_template('chat.html', form=form, messages=messages, curr_room=room, rooms=rooms)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "add_admin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def add_admin(room_id):\n    \"\"\"Admin setup\"\"\"\n    room = Room.query.get(room_id)\n    if current_user != room.author:\n        abort(401)\n    if request.method == \"POST\":\n        data = request.get_json()\n        user  = User.query.get(data[\"user_id\"])\n        room.admins.append(user)\n        try: ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ban_user",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def ban_user(room_id):\n    room = Room.query.get(room_id)\n    if request.method == \"POST\":\n        data = request.get_json()\n        user  = User.query.get(data[\"user_id\"])\n        if user in room.admins:\n            abort(401)\n        room.banned.append(user)\n        room.participants.remove(user)\n        try: ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "remove_admin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def remove_admin(room_id):\n    room = Room.query.get(room_id)\n    if current_user != room.author:\n        abort(401)\n    data = request.get_json()\n    user  = User.query.get(data[\"user_id\"])\n    if user in room.admins:\n        room.admins.remove(user)\n    else:\n        return jsonify(success=False)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "unban_user",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def unban_user(room_id):\n    room = Room.query.get(room_id)\n    room = Room.query.get(room_id)\n    data = request.get_json()\n    user  = User.query.get(data[\"user_id\"])\n    if user in room.banned:\n        room.banned.remove(user)\n    else:\n        return jsonify(success=False)\n    try: ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "on_join",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def on_join(data):\n    room = data['room']\n    join_room(room)\n    emit('status', {'msg': \"A user has joined the room\"}, room=room)\n@app.route('/send_message/<int:room_id>', methods=[\"POST\"])\n@login_required\ndef send_message(room_id):\n    \"\"\"Send message. uses socketio\n    chat.html, rooms_sidebar.html, right_click_menu.html is associated\"\"\"\n    form = MessageForm()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "send_message",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def send_message(room_id):\n    \"\"\"Send message. uses socketio\n    chat.html, rooms_sidebar.html, right_click_menu.html is associated\"\"\"\n    form = MessageForm()\n    if form.validate_on_submit():\n        room = Room.query.get(room_id)\n        if not room:\n            return jsonify({\n                \"status\":'failed',\n            })",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "delete_message",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def delete_message(message_id):\n    \"\"\"Deletes a message\"\"\"\n    message = Messages.query.get(message_id)\n    room = str(message.room_id)\n    if (current_user.id == message.author.id) or ((current_user in message.room.admins)):\n        if current_user != message.author and current_user != message.room.author and message.author in message.room.admins:\n            abort(401) \n        message.room.message_count = message.room.message_count - 1\n        db.session.delete(message)\n        db.session.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "delete_room",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def delete_room(room_id):\n    room = Room.query.get(room_id)\n    if not current_user.id == room.author_id:\n        return jsonify({\"status\": 'failed',\n                        \"id\": room_id})\n    db.session.delete(room)\n    db.session.commit()\n    socketio.emit('room_delete', {\"id\":room_id}, namespace='/')\n    return jsonify({\"status\": \"success\", \n                    \"id\": room_id})",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_room",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_room(room_id):\n    room = Room.query.get(room_id)\n    return jsonify(room.to_dict())\n@app.route('/update_session', methods=[\"POST\"])\ndef update_session():\n    \"\"\"Updates user session. send a custom key and value as json to set in user session\"\"\"\n    data = request.get_json()\n    for key, value in data.items():\n        session[key] = value\n    return jsonify({\"message\":\"session updated\"})",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "update_session",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def update_session():\n    \"\"\"Updates user session. send a custom key and value as json to set in user session\"\"\"\n    data = request.get_json()\n    for key, value in data.items():\n        session[key] = value\n    return jsonify({\"message\":\"session updated\"})\n\"\"\"Error Handlers\"\"\"\n@app.errorhandler(404)\ndef page_not_found(e):\n    return render_template('errorpage.html', error_code=404, error_details=\"Page not found\", exception=str(e))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "page_not_found",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def page_not_found(e):\n    return render_template('errorpage.html', error_code=404, error_details=\"Page not found\", exception=str(e))\n@app.errorhandler(401)\ndef forbidden(e):\n    return render_template('errorpage.html', error_code=401, error_details=\"You are Not Allowed\", exception=str(e))\n@app.errorhandler(500)\ndef page_not_found(e):    \n    return render_template('errorpage.html', error_code=500, error_details=\"It's not you. It's Us.\", exception=str(e))\n\"\"\"Send static files if hosting service not sharing statics publicly\"\"\"\n@app.route('/static/<path:filename>')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "forbidden",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def forbidden(e):\n    return render_template('errorpage.html', error_code=401, error_details=\"You are Not Allowed\", exception=str(e))\n@app.errorhandler(500)\ndef page_not_found(e):    \n    return render_template('errorpage.html', error_code=500, error_details=\"It's not you. It's Us.\", exception=str(e))\n\"\"\"Send static files if hosting service not sharing statics publicly\"\"\"\n@app.route('/static/<path:filename>')\ndef serve_static(filename):\n    root_dir = os.path.dirname(os.getcwd())\n    return send_from_directory(",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "page_not_found",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def page_not_found(e):    \n    return render_template('errorpage.html', error_code=500, error_details=\"It's not you. It's Us.\", exception=str(e))\n\"\"\"Send static files if hosting service not sharing statics publicly\"\"\"\n@app.route('/static/<path:filename>')\ndef serve_static(filename):\n    root_dir = os.path.dirname(os.getcwd())\n    return send_from_directory(\n        os.path.join(root_dir, 'static'), \n        filename\n    )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "serve_static",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def serve_static(filename):\n    root_dir = os.path.dirname(os.getcwd())\n    return send_from_directory(\n        os.path.join(root_dir, 'static'), \n        filename\n    )\nif __name__ == \"__main__\":\n    socketio.run(app)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "base_dir",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "base_dir = os.path.abspath(os.path.dirname(__file__))\napp = Flask(__name__, \n            static_folder=os.path.join(base_dir, 'static'),\n            template_folder=os.path.join(base_dir, 'templates'))\n\"\"\"\nSummary of variables\n---------------------\n*   base_dir: The base directory of the project\n*   app: The Flask app instance\n*   app.config: The configuration of the app",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__, \n            static_folder=os.path.join(base_dir, 'static'),\n            template_folder=os.path.join(base_dir, 'templates'))\n\"\"\"\nSummary of variables\n---------------------\n*   base_dir: The base directory of the project\n*   app: The Flask app instance\n*   app.config: The configuration of the app\n*   SQLALCHEMY_DATABASE_URI: The URI of the database",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"SQLALCHEMY_DATABASE_URI\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"SQLALCHEMY_DATABASE_URI\"] =  os.environ.get('DATABASE_URI', \"sqlite:///database.db\")\napp.config[\"SQLALCHEMY_TRACK_MODIFICATIONS\"] = os.environ.get('SQLALCHEMY_TRACK_MODIFICATIONS',False)\napp.config[\"UPLOAD_LOCATION\"] = os.environ.get('UPLOAD_LOCATION', 'uploads/')\napp.config[\"MAX_CONTENT_LENGTH\"] = os.environ.get('MAX_CONTENT_LENGTH',16*1024*1024)\napp.config[\"SECRET_KEY\"] = os.environ.get('SECRET_KEY', None)\napp.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"SQLALCHEMY_TRACK_MODIFICATIONS\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"SQLALCHEMY_TRACK_MODIFICATIONS\"] = os.environ.get('SQLALCHEMY_TRACK_MODIFICATIONS',False)\napp.config[\"UPLOAD_LOCATION\"] = os.environ.get('UPLOAD_LOCATION', 'uploads/')\napp.config[\"MAX_CONTENT_LENGTH\"] = os.environ.get('MAX_CONTENT_LENGTH',16*1024*1024)\napp.config[\"SECRET_KEY\"] = os.environ.get('SECRET_KEY', None)\napp.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"UPLOAD_LOCATION\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"UPLOAD_LOCATION\"] = os.environ.get('UPLOAD_LOCATION', 'uploads/')\napp.config[\"MAX_CONTENT_LENGTH\"] = os.environ.get('MAX_CONTENT_LENGTH',16*1024*1024)\napp.config[\"SECRET_KEY\"] = os.environ.get('SECRET_KEY', None)\napp.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"MAX_CONTENT_LENGTH\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"MAX_CONTENT_LENGTH\"] = os.environ.get('MAX_CONTENT_LENGTH',16*1024*1024)\napp.config[\"SECRET_KEY\"] = os.environ.get('SECRET_KEY', None)\napp.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"SECRET_KEY\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"SECRET_KEY\"] = os.environ.get('SECRET_KEY', None)\napp.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['PERMANENT_SESSION_LIFETIME']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)\n#flask security\napp.config[\"SESSION_COOKIE_HTTPONLY\"]\napp.config[\"SESSION_COOKIE_SECURE\"]\napp.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"MAIL_SERVER\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"MAIL_SERVER\"] = os.environ.get('MAIL_SERVER','smtp.gmail.com')\napp.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"MAIL_PORT\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"MAIL_PORT\"] = os.environ.get('MAIL_PORT',587)\napp.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['MAIL_USE_TLS']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['MAIL_USE_TLS'] =  os.environ.get('MAIL_USE_TLS',True)\napp.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['MAIL_USERNAME']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', None)\napp.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['MAIL_PASSWORD']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', None)\napp.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,\n        api_key=cloudinary_api_key,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['MAIL_DEFAULT_SENDER']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', None)\ncloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,\n        api_key=cloudinary_api_key,\n        api_secret=cloudinary_secret",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary_name",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "cloudinary_name = os.environ.get('CLOUDINARY_CLOUD_NAME', None)\ncloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,\n        api_key=cloudinary_api_key,\n        api_secret=cloudinary_secret\n    )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary_api_key",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "cloudinary_api_key = os.environ.get('CLOUDINARY_API_KEY', None)\ncloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,\n        api_key=cloudinary_api_key,\n        api_secret=cloudinary_secret\n    )\ndb.init_app(app)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary_secret",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "cloudinary_secret = os.environ.get('CLOUDINARY_API_SECRET', None)\nif cloudinary_name and cloudinary_api_key and cloudinary_secret:\n    app.config[\"UPLOAD_LOCATION\"] = 'cloudinary'\n    cloudinary.config(\n        cloud_name=cloudinary_name,\n        api_key=cloudinary_api_key,\n        api_secret=cloudinary_secret\n    )\ndb.init_app(app)\nmail.init_app(app)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "migrate",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "migrate = Migrate(app, db)\nlogin_manager = LoginManager(app)\nlogin_manager.login_view = \"auth.login\"\napp.register_blueprint(auth_bp, url_prefix='/auth')\nsocketio = SocketIO(app, manage_session=True)\nwith app.app_context():\n    db.create_all()\n# check admin for room ban edit info actions Wrapper\n# requires room id to be in url\ndef admin_required(func):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "login_manager = LoginManager(app)\nlogin_manager.login_view = \"auth.login\"\napp.register_blueprint(auth_bp, url_prefix='/auth')\nsocketio = SocketIO(app, manage_session=True)\nwith app.app_context():\n    db.create_all()\n# check admin for room ban edit info actions Wrapper\n# requires room id to be in url\ndef admin_required(func):\n    @wraps(func)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager.login_view",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "login_manager.login_view = \"auth.login\"\napp.register_blueprint(auth_bp, url_prefix='/auth')\nsocketio = SocketIO(app, manage_session=True)\nwith app.app_context():\n    db.create_all()\n# check admin for room ban edit info actions Wrapper\n# requires room id to be in url\ndef admin_required(func):\n    @wraps(func)\n    def decorator(room_id=None,*args, **kwargs):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "socketio",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "socketio = SocketIO(app, manage_session=True)\nwith app.app_context():\n    db.create_all()\n# check admin for room ban edit info actions Wrapper\n# requires room id to be in url\ndef admin_required(func):\n    @wraps(func)\n    def decorator(room_id=None,*args, **kwargs):\n        if room_id:\n            room = Room.query.get(room_id)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "RoomForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class RoomForm(FlaskForm):\n    name = StringField(\"Room Name:\", validators=[DataRequired()])\n    photo = FileField(\"Upload Photo\", validators=[FileAllowed([\"jpg\", \"jpeg\", \"png\"], \"Only Images are allowed\")])\n    submit = SubmitField(\"Create Room\")\nclass MessageForm(FlaskForm):\n    message = StringField(\"Enter a message\", validators=[DataRequired()])\n    submit = SubmitField(\"Send\")\nclass RoomEditForm(FlaskForm):\n    name = StringField(\"Room Name:\", validators=[DataRequired()])\n    photo = FileField(\"Upload Photo\", validators=[FileAllowed([\"jpg\", \"jpeg\", \"png\"], \"Only Images are allowed\")])",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "MessageForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class MessageForm(FlaskForm):\n    message = StringField(\"Enter a message\", validators=[DataRequired()])\n    submit = SubmitField(\"Send\")\nclass RoomEditForm(FlaskForm):\n    name = StringField(\"Room Name:\", validators=[DataRequired()])\n    photo = FileField(\"Upload Photo\", validators=[FileAllowed([\"jpg\", \"jpeg\", \"png\"], \"Only Images are allowed\")])\n    submit = SubmitField(\"Edit Room\")",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "RoomEditForm",
+        "kind": 6,
+        "importPath": "forms",
+        "description": "forms",
+        "peekOfCode": "class RoomEditForm(FlaskForm):\n    name = StringField(\"Room Name:\", validators=[DataRequired()])\n    photo = FileField(\"Upload Photo\", validators=[FileAllowed([\"jpg\", \"jpeg\", \"png\"], \"Only Images are allowed\")])\n    submit = SubmitField(\"Edit Room\")",
+        "detail": "forms",
+        "documentation": {}
+    },
+    {
+        "label": "Room",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Room(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))\n    author = db.relationship('User', backref=db.backref(\"rooms_own\", lazy=True))\n    created = db.Column(db.DateTime, default=datetime.utcnow)\n    last_message = db.Column(db.DateTime, default=datetime.utcnow)\n    participants = db.relationship('User', backref=db.backref(\"rooms_participant\", lazy=True, cascade=\"all, delete\"), secondary=participants_table)\n    admins = db.relationship('User', backref=db.backref(\"rooms_admin\", lazy=True, cascade=\"all, delete\"), secondary=admins_table)\n    banned = db.relationship('User', backref=db.backref(\"rooms_banned\", lazy=True, cascade=\"all, delete\"), secondary=banned_table)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Messages",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Messages(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    content = db.Column(db.Text)\n    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))\n    author = db.relationship('User', backref=db.backref(\"messages\", lazy=True))\n    room_id = db.Column(db.Integer, db.ForeignKey('room.id'))\n    room = db.relationship('Room', backref=db.backref(\"messages\", lazy=True, cascade=\"all, delete\"))\n    time = db.Column(db.DateTime, default=datetime.utcnow)\n    def to_dict(self):\n        return {",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "participants_table",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "participants_table = db.Table('pariticipants',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),\n    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)                                  \n)\nadmins_table = db.Table('admins',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),\n    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)                                  \n)\nbanned_table = db.Table('banned',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "admins_table",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "admins_table = db.Table('admins',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),\n    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)                                  \n)\nbanned_table = db.Table('banned',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),\n    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)                                  \n)\nclass Room(db.Model):\n    id = db.Column(db.Integer, primary_key=True)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "banned_table",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "banned_table = db.Table('banned',\n    db.Column('room_id', db.Integer, db.ForeignKey('room.id'), primary_key=True),\n    db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True)                                  \n)\nclass Room(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))\n    author = db.relationship('User', backref=db.backref(\"rooms_own\", lazy=True))\n    created = db.Column(db.DateTime, default=datetime.utcnow)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "FileUploadFailed",
+        "kind": 6,
+        "importPath": "upload",
+        "description": "upload",
+        "peekOfCode": "class FileUploadFailed(Exception):\n    pass\nclass NoFileError(Exception):\n    pass\ndef upload_file(file, filename=None, overwrite=True, path=\"profile_pictures\"):\n    if file is not None:\n        if not filename:\n            filename = str(uuid.uuid4())\n        if current_app.config[\"UPLOAD_LOCATION\"] == 'cloudinary':\n            try:",
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "NoFileError",
+        "kind": 6,
+        "importPath": "upload",
+        "description": "upload",
+        "peekOfCode": "class NoFileError(Exception):\n    pass\ndef upload_file(file, filename=None, overwrite=True, path=\"profile_pictures\"):\n    if file is not None:\n        if not filename:\n            filename = str(uuid.uuid4())\n        if current_app.config[\"UPLOAD_LOCATION\"] == 'cloudinary':\n            try:\n                upload_result = cloudinary.uploader.upload(file, \n                                                    public_id=f\"{path}/{filename}\",",
+        "detail": "upload",
+        "documentation": {}
+    },
+    {
+        "label": "upload_file",
+        "kind": 2,
+        "importPath": "upload",
+        "description": "upload",
+        "peekOfCode": "def upload_file(file, filename=None, overwrite=True, path=\"profile_pictures\"):\n    if file is not None:\n        if not filename:\n            filename = str(uuid.uuid4())\n        if current_app.config[\"UPLOAD_LOCATION\"] == 'cloudinary':\n            try:\n                upload_result = cloudinary.uploader.upload(file, \n                                                    public_id=f\"{path}/{filename}\",\n                                                    overwrite=overwrite)\n                    # Get the secure URL of the uploaded image",
+        "detail": "upload",
+        "documentation": {}
+    }
+]

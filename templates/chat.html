@@ -158,31 +158,7 @@
         }
     });
             
-    // function createDeleteButton(messageId) {
-    //     const deleteButton = document.createElement('div');
-    //     deleteButton.id = `delete_btn_${messageId}`;
-    //     deleteButton.className = 'h-8 p-1 mx-2 mt-1 rounded-full shadow-md opacity-40';
-    
-    //     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    //     svg.setAttribute('class', 'w-6 h-6');
-    //     svg.setAttribute('viewBox', '0 0 24 24');
-    //     svg.setAttribute('fill', 'none');
-    //     svg.setAttribute('stroke', 'red');
-    //     svg.setAttribute('stroke-width', '2');
-    
-    //     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    //     path.setAttribute('d', 'M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16');
-    
-    //     svg.appendChild(path);
-    //     deleteButton.appendChild(svg);
-    //     const confirm_ = document.getElementById("confirm_section");
-    //     deleteButton.addEventListener("click", () => {
-    //             event.stopPropagation();
-    //             currentMessageId = messageId;
-    //             confirm_.style.display = 'flex';
-    //         })
-    //     return deleteButton;
-    // }
+
     
     function createProfilePicture(author) {
         const profilePicture = author.profile.profile_picture;
@@ -225,7 +201,7 @@
     document.addEventListener("DOMContentLoaded", ()=>{
         
         // swipe for rooms menu
-        
+        // used chatgpt to get this part
         let touchStartX = 0;
         let touchEndX = 0;
         let touchStartY = 0;
