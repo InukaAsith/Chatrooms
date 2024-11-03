@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
-<form method="post" enctype="multipart/form-data" class=" dark:bg-[#252c43] flex-col items-start justify-start text-left py-11 md:px-14 px-8 w-[92vw] md:w-full dark:text-zinc-200 rounded-[30px] shadow-md bg-[#f9f9f9]">
+<form method="post" enctype="multipart/form-data" class="text-base dark:bg-[#252c43] flex-col items-start justify-start text-left py-11 md:px-14 px-8 w-[92vw] md:w-full dark:text-zinc-200 rounded-[30px] shadow-md bg-[#f9f9f9]">
     {{form.hidden_tag()}}
     <div id="name" class="flex justify-between my-3">
         <span>{{form.name.label(class="text-base")}}:</span>
