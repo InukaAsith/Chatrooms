@@ -1,10 +1,5 @@
 # 🚀 Chat Rooms - A Real-Time Chat App (CS50 Fiinal Project)
 
-
-# Video Demo: [Watch Here](https://youtu.be/gefUGwatrZs)
-
-# Details:
-
 ![chat rooms preview](readme_files/6.png)
 <details>
   <summary>Expand for more images</summary>
@@ -16,11 +11,19 @@
   ![chat rooms preview](readme_files/5.png)
 </details>
 
-### Live Demo: [chatrooms-demo.vercel.app](https://chatrooms-demo.vercel.app)
+## Live Demo: [chatrooms-demo.vercel.app](https://chatrooms-demo.vercel.app)
 #### Due to limitations of vercel realtime message fetching (socketio) won't work on demo. Also otp verification is disabled on demo (I don't have a way to send emails for free)
 Chat Rooms is a real-time chat website featuring a modern UI with both dark and light themes. It offers seamless communication and prioritizes user privacy and effective community management.
 
+# Details:
+
+Chat Rooms is a real-time chat website featuring a modern UI with both dark and light themes. It offers seamless communication and prioritizes user privacy and effective community management.
+
 Supports unlimited number of users with email verifications admin system user bans and much more. 
+
+
+
+### Video Demo: [Watch Here](https://youtu.be/gefUGwatrZs)
 
 ## ✨ Key Features
 
