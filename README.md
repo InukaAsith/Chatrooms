@@ -13,7 +13,6 @@
 
 ## Live Demo: [chatrooms-demo.vercel.app](https://chatrooms-demo.vercel.app)
 #### Due to limitations of vercel realtime message fetching (socketio) won't work on demo. Also otp verification is disabled on demo (I don't have a way to send emails for free)
-Chat Rooms is a real-time chat website featuring a modern UI with both dark and light themes. It offers seamless communication and prioritizes user privacy and effective community management.
 
 # Details:
 
