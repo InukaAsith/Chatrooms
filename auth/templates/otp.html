@@ -1,0 +1,23 @@
+{% extends 'layout.html'%}
+{% block body %}
+
+<form method="post" class=" py-11 px-8 md:w-full w-[92vw] md:px-14 rounded-[30px] shadow-md dark:bg-[#252c43] dark:text-zinc-200 bg-[#f9f9f9]">
+    {{form.hidden_tag()}}
+    <div class="flex-col justify-center">
+        <div class="flex flex-col justify-around my-3">
+            <span>{{form.otp.label(class="text-base")}}:</span>
+            <span class="ml-[3.6rem]">{{form.otp(class="px-3 py-2 ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+        </div>
+        {% if form.otp.errors %}
+        {% for error in form.otp.errors %}
+        <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="flex justify-center">
+        <span>{{form.submit(class="px-5 py-2 ml-3 text-sm text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ")}}</span>
+        <span><a href="{{url_for('auth.login')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Back</a></span>
+    </div>
+</form>
+
+{% endblock %} 

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block body %}
+<form method="post" enctype="multipart/form-data" class="flex-col items-start justify-start text-left py-11 md:w-full w-[92vw] px-8 md:px-14 rounded-[30px] shadow-md dark:bg-[#252c43] dark:text-zinc-200 bg-[#f9f9f9]"">
+    {{form.hidden_tag()}}
+    <div id="name" class="flex justify-between my-3">
+        <span>{{form.name.label(class="text-base")}}:</span>
+        <span>{{form.name(class="px-3 py-2 ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+    </div>
+    {% if form.name.errors %}
+        {% for error in form.name.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% endif %}
+    <div id="username" class="flex justify-between my-3">
+        <span>{{form.username.label(class="text-base")}}:</span>
+        <span>{{form.username(class="px-3 py-2 ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+    </div>
+    {% if form.username.errors %}
+        {% for error in form.username.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% endif %}
+    <div id="age" class="flex justify-between my-3">
+        <span>{{form.age.label(class="text-base")}}:</span>
+        <span>{{form.age(class="px-3 py-2 ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+    </div>
+    {% if form.age.errors %}
+        {% for error in form.age.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% endif %}
+    <div id="email" class="flex justify-between my-3">
+        <span>{{form.email.label(class="text-base")}}:</span>
+        <span>{{form.email(class="px-3 py-2 ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+    </div>
+    {% if form.email.errors %}
+        {% for error in form.email.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% endif %}
+    <div id="password" class="flex justify-between my-3 fllex">
+        <span>{{form.password.label(class="text-base")}}:</span>
+        <span>{{form.password(class="px-3 py-2 ml-3 text-sm rounded-lg  dark:bg-[#3a4568] shadow-lg")}}</span>
+    </div>
+    {% if form.password.errors %}
+        {% for error in form.password.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% else %}
+    {% endif %}
+    <div id="confirm_password" class="flex justify-between my-3">
+        <span>{{form.confirm_password.label(class="text-base")}}:</span>
+        <span>{{form.confirm_password(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568]")}}</span>
+    </div>
+    {% if form.confirm_password.errors %}
+        {% for error in form.confirm_password.errors %}
+            <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+    {% endif %}
+    <div id="bio" class="flex justify-between my-3">
+        <span>{{form.bio.label(class="text-base")}}:</span>
+        <span>{{form.bio(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568]")}}</span>
+    </div>
+    <div id="gender" class="flex justify-between my-3">
+        <span>{{form.gender.label(class="text-base")}}:</span>
+        <span>{{form.gender(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568]")}}</span>
+    </div>
+    {% if form.gender.errors %}
+    {% for error in form.gender.errors %}
+        <span class="text-sm text-red-400">{{error}}</span>
+    {% endfor %}
+    {% endif %}
+    <div id="photo" class="flex justify-between my-3">
+        <span>{{form.photo.label(class="text-base")}}</span>
+        <span>{{form.photo(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568]")}}</span>
+    </div>
+    <div class="flex justify-center">
+        <span>{{form.submit(class="px-5 py-2 ml-3 text-sm text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ")}}</span>
+        <span><a href="{{url_for('auth.login')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Login</a></span>
+    </div>
+
+</form>
+{% endblock %}

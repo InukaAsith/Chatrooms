@@ -1,0 +1,108 @@
+<!-- this is the preferences pane which is a div that pops up when the preferences icon is clicked -->
+
+
+{% block preferences_pane %}
+<div id="preferences-pane" class="h-[300px] opacity-0 transition-all duration-500 ease-in-out preferences-container fixed top-[-348px] right-0 rounded-2xl w-[250px] bg-[#f4f4f4f4] text-slate-600 dark:text-slate-200 dark:bg-[#202739] z-[20]">
+    <div class="top-part">
+        
+            {% if current_user.id %}
+                <div id="profile_link" class="w-[90%] h-20 rounded-2xl px-6 py-4 dark:hover:bg-[#252c43] flex-col flex cursor-pointer justify-center">
+                
+                    <h1 class="text-base font-bold text-zinc-600 dark:text-zinc-300">{{current_user.name}}</h1>
+                    <h3 class="text-sm text-zinc-600 dark:text-zinc-400">{{current_user.email}}</h3>
+                </div>
+            {% else %}
+                <div id="profile_link" class="w-[90%] h-20 rounded-2xl px-6 py-4 cursor-pointer dark:hover:bg-[#252c43] flex-col flex justify-center">
+                    <h1 class="text-base font-bold text-zinc-600 dark:text-zinc-400">Login</h1>
+                    
+                </div>
+        
+            {% endif %}
+    </div>
+    <div class="ml-5 border-t border-gray-400 opacity-50 w-[80%]"></div>
+    <div class="middle-part">        
+        <h1 class="mt-2 text-base font-bold cursor-default ml-7 text-zinc-600 dark:text-zinc-300">Theme</h1>
+        <div class="w-[100%] h-[110px] rounded-2xl px-6 py-1 flex items-center justify-center">
+            <div id="light-button" class="flex flex-col items-center w-1/2 p-4 light-container mr-2 bg-slate-200 dark:bg-[#252c43] hover:bg-slate-300  dark:hover:bg-[#2e3347]  rounded-3xl" id="light-button">
+                <div class="w-10 h-10 mb-1 dark:invert opacity-80">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#191a1c">
+                          <circle cx="12" cy="12" r="4"/>
+                          <rect x="11" y="1" width="2" height="3"/>
+                          <rect x="11" y="20" width="2" height="3"/>
+                          <rect x="1" y="11" width="3" height="2"/>
+                          <rect x="20" y="11" width="3" height="2"/>
+                          <rect x="3.51" y="3.51" width="2" height="3" transform="rotate(45 4.51 5.01)"/>
+                          <rect x="17.49" y="17.49" width="2" height="3" transform="rotate(45 18.49 18.99)"/>
+                          <rect x="3.51" y="17.49" width="2" height="3" transform="rotate(-45 4.51 18.99)"/>
+                          <rect x="17.49" y="3.51" width="2" height="3" transform="rotate(-45 18.49 5.01)"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <h4 class="text-sm text-zinc-600 dark:text-zinc-300">Light</h4>
+            </div>
+            <div id="dark-button" class="flex flex-col items-center w-1/2 p-4 light-container bg-slate-200 dark:bg-[#252c43] hover:bg-slate-300  dark:hover:bg-[#2e3347]  rounded-3xl" id="light-button">
+                <div class="w-10 h-10 mb-1 dark:invert opacity-80">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#191a1c">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                      </svg>
+                    </div>
+                    <h4 class="text-sm text-zinc-600 dark:text-zinc-300">Dark</h4>
+            </div>
+              
+        </div>
+        
+    </div>
+    <div class="ml-5 border-t opacity-50 border-gray-400 w-[80%]"></div>
+    <div class="end-part">
+        
+            {% if current_user.id %}
+                <a href="/auth/logout" class="flex items-center justify-center px-6 w-[80%] py-3 mt-3 ml-5 rounded-xl shadow-lg dark:text-zinc-200 dark:bg-[#3c435d] text-zinc-700 font-bold bg-slate-300">Sign Out</a>
+            {% else %}    
+                <a href="/auth/register" class="flex items-center justify-center px-6 w-[80%] py-3 mt-3 ml-5 rounded-xl shadow-lg dark:text-zinc-200 dark:bg-[#3c435d] text-zinc-700 font-bold bg-slate-300">Register</a>
+            {% endif %}
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // shows preferences menu
+        const dashboard = document.getElementById("profile_link")
+        dashboard.addEventListener("click", () => {
+            window.location.href = '/auth/dashboard'
+        });
+        const body_ = document.getElementById("body")
+        const light_toggle = document.getElementById("light-button")
+        const dark_toggle = document.getElementById("dark-button")
+        light_toggle.addEventListener("click", () => {
+            body_.classList.toggle("dark", false)
+            body_.classList.toggle("bg-[#20273a]", false)
+            body_.classList.toggle("bg-white", true)
+            fetch ('/update_session', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({theme: "1"})
+            })
+            .catch((error) => console.error(error));
+        });
+        dark_toggle.addEventListener("click", () => {
+            body_.classList.toggle("dark", true)
+            body_.classList.toggle("bg-white", false)
+            body_.classList.toggle("bg-[#20273a]", true)
+            fetch ('/update_session', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({theme: "0"})
+            })
+            .catch((error) => console.error(error));
+        });
+    })
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- templates/edit_room.html -->
+<!-- edit room page -->
+
+<form method="post" enctype="multipart/form-data" class=" dark:bg-[#252c43] flex-col items-start justify-start text-left py-11 md:px-14 px-8 w-[92vw] md:w-full dark:text-zinc-200 rounded-[30px] shadow-md bg-[#f9f9f9]">
+    {{form.hidden_tag()}}
+    <div id="name" class="flex justify-between my-3">
+        <span>{{form.name.label(class="text-base")}}:</span>
+        <span>{{form.name(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568] dark:text-zinc-200")}}</span>
+    </div>
+    <div id="photo" class="flex justify-between my-3">
+        <span>{{form.photo.label(class="text-base")}}</span>
+        <span>{{form.photo(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568] dark:text-zinc-200")}}</span>
+    </div>
+    <div class="flex justify-center">
+        <span>{{form.submit(class="px-5 py-2 ml-3 text-sm text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ")}}</span>
+        <span><a href="{{request.referrer}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Cancel</a></span>
+    </div>
+    <div class="w-full mt-3" id="admin-section">
+        <span class="flex items-center justify-between">
+            <h2 class="mt-3 mb-3 text-lg font-semibold md:mt-4 md:text-xl text-slate-700 dark:text-slate-200">Administrators</h2>
+            {% if current_user == room.author %}<a href="{{url_for('add_admin', room_id=room.id)}}" class="relative top-[6px] px-[0.5rem] py-[0.4rem] ml-3 text-xs text-center text-white duration-300 ease-in-out bg-blue-400 dark:bg-blue-500 rounded-full shadow-lg  transition-color hover:bg-blue-600 ">+ Add</a>{% endif %}
+        </span>
+        <div class="max-h-[30vh] w-full overflow-y-auto mt-2 rounded-3xl dark:bg-[#323c5a] bg-slate-200 dark:text-slate-200 text-zinc-700 px-8 py-4">
+            {% for admin in room.admins %}
+            <div  id="user_{{admin.id}}" class="flex items-center justify-between w-full hover:dark:bg-[#3d486b] px-4 text-base rounded-xl my-1 py-2 hover:bg-slate-100">
+                <span class="flex items-center justify-start" onclick="callProfile(event, '{{url_for('profile', user_id=admin.id)}}')">
+                    {% if admin.profile.profile_picture.filename and current_user.id %}
+                    <img src="{{admin.profile.profile_picture.filename}}" alt="Profile Photo" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% else %}
+                    <img src="../static/unknown_user.jpg" alt="" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% endif %}
+                    <h2>{{admin.name}}</h2>
+                </span>
+                {% if current_user == room.author and room.author != admin %}
+                <div id="btn_delete_admin_{{admin.id}}" class="mt-1 rounded-full shadow-md opacity-40 dark:opacity-60">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
+                    <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="w-full mt-3" id="banned-section">
+        <span class="flex items-center justify-between">
+            <h2 class="mt-3 mb-3 text-lg font-semibold md:mt-4 md:text-xl text-slate-700 dark:text-slate-200">Banned</h2>
+            <a href="{{url_for('ban_user', room_id=room.id)}}" class="relative top-[6px] px-[0.5rem] py-[0.4rem] ml-3 text-xs text-center text-white duration-300 ease-in-out bg-blue-400 dark:bg-blue-500 rounded-full shadow-lg  transition-color hover:bg-blue-600 ">+ Add</a>
+        </span>
+
+        {% if room.banned %}
+        <div class="max-h-[30vh] w-full overflow-y-auto mt-2 rounded-3xl dark:bg-[#323c5a] bg-slate-200 dark:text-slate-200 text-zinc-700 px-8 py-4">
+            {% for banned_user in room.banned %}
+            <div id="user_{{banned_user.id}}" class="flex items-center justify-between w-full hover:dark:bg-[#3d486b] px-4 text-base rounded-xl my-1 py-2 hover:bg-slate-100">
+                <span onclick="callProfile(event, '{{url_for('profile', user_id=banned_user.id)}}')" class="flex items-center justify-start">
+                    {% if banned_user.profile.profile_picture.filename and current_user.id %}
+                    <img src="{{banned_user.profile.profile_picture.filename}}" alt="Profile Photo" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% else %}
+                    <img src="../static/unknown_user.jpg" alt="" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% endif %}
+                    <h2>{{banned_user.name}}</h2>
+                </span>
+                {% if current_user in room.admins %}
+                <div id="btn_delete_banned_{{banned_user.id}}" class="mt-1 rounded-full shadow-md opacity-40 dark:opacity-60">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
+                    <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <h2 class="text-xs text-center dark:text-slate-200 text-zinc-700">No one banned yet</h2>
+        {% endif %}
+    </div>
+</form>
+
+<!-- delete confirm html -->
+<div class="fixed top-0 left-0 items-center justify-center hidden w-full h-full px-3 py-2 rounded-lg shadow-md backdrop-blur-sm" id="confirm_section">
+    <div class="flex-col px-16 py-8 shadow-lg rounded-2xl dark:bg-[#202739] bg-slate-50">
+        <p id="confirm_message" class="mb-4 text-base text-center dark:text-zinc-200 text-zinc-800"></p>
+        <div class="flex items-center justify-center button-container">
+            <button id="yes-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-red-400 rounded-lg shadow-lg dark:bg-red-500 ">Yes</button>
+            <button id="no-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">No</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function callProfile(event, url) {
+        window.location.href = url;
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        const admin_btns = document.querySelectorAll("[id^='btn_delete_admin_']");
+        let current_chat_json = null
+        admin_btns.forEach(button => {
+            button.addEventListener("click", () => {
+                event.stopPropagation();
+                current_chat_json = {
+                    "user_id":button.id.split('_').pop(),
+                    "room_id":'{{room.id}}',
+                    "demote": true,
+                    "unban":false,
+                }
+            confirm.querySelector("#confirm_message").textContent = "Demote Admin?";
+            confirm.style.display = 'flex';
+        })
+    })
+        const ban_btns = document.querySelectorAll("[id^='btn_delete_banned_']");
+        ban_btns.forEach(button => {
+            button.addEventListener("click", () => {
+                event.stopPropagation();
+                current_chat_json = {
+                    "user_id":button.id.split('_').pop(),
+                    "room_id":'{{room.id}}',
+                    "demote": false,
+                    "unban":true,
+                }
+            confirm.querySelector("#confirm_message").textContent= "Unban User?";
+            confirm.style.display = 'flex';
+            })
+        })
+
+        const confirm = document.getElementById("confirm_section");
+        document.getElementById('no-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+        });
+        
+        document.getElementById('yes-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+            if (current_chat_json) {
+                const user_id = current_chat_json.user_id;
+                const room_id = current_chat_json.room_id;
+                if (current_chat_json.unban){
+                    fetch(`/unban_user/${room_id}`, {
+                        method: 'POST',
+                        headers: {
+                            'content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(current_chat_json)
+                        
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const bannedUser= document.querySelector(`#user_${user_id}`);
+                            if (bannedUser) {
+                                bannedUser.remove();
+                            }
+                        }
+                    })
+                    .catch(error => console.log(error));
+                }
+                else if (current_chat_json.demote) {
+                    fetch(`/remove_admin/${room_id}`, {
+                        method: 'POST',
+                        headers: {
+                            'content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(current_chat_json)
+                        
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const adminUser= document.querySelector(`#user_${user_id}`);
+                            if (adminUser) {
+                                adminUser.remove();
+                            }
+                        }
+                    })
+                    .catch(error => console.log(error));
+                }
+            
+            }
+        });
+    });
+
+</script>
+{% endblock %}

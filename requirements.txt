@@ -1,0 +1,13 @@
+flask-migrate
+flask-mail
+itsdangerous
+flask-migrate
+flask-security
+python-dotenv
+flask-login
+flask-sqlalchemy
+redis
+flask-socketio
+flask
+psycopg2-binary
+cloudinary

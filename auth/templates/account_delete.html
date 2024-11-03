@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+<form method="post" class="py-11 px-14 rounded-[30px] shadow-md dark:bg-[#252c43] bg-[#f9f9f9]">
+    {{form.hidden_tag()}}
+    <div class="flex-col justify-center">
+        <div class="flex-row justify-around my-3 dark:text-zinc-200">
+            <span>{{form.password.label(class="text-base")}}:</span>
+            <span class="ml-3">{{form.password(class="px-3 py-2 ml-3 text-sm rounded-lg shadow-lg dark:bg-[#3a4568]")}}</span>
+        </div>
+        {% if form.password.errors %}
+        {% for error in form.password.errors %}
+        <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="flex justify-center">
+        <span>{{form.submit(class="px-5 py-2 ml-3 text-sm text-white bg-red-400 rounded-lg shadow-lg ")}}</span>
+        <span><a href="{{url_for('auth.dashboard')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg ">Cancel</a></span>
+    </div>
+</form>
+
+{% endblock %}

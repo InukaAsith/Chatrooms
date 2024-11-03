@@ -1,0 +1,187 @@
+<!-- This file renders the rooms sidebar on the left side of the screen
+
+    handles room deletion from sidebar and chat_info
+    Sidebar trigger area script and element here
+    swipe for sidebar handled by chat.html
+
+-->
+
+{% block rooms_sidebar %}
+<div class="md:w-16 w-0 fixed top-[60px] h-full left-0" id="trigger-area"></div>
+<div id="rooms-sidebar" class=" transform translate-x-[-100%] transition-all opacity-0 duration-[0.4s] ease-in-out fixed top-0 pt-20 left-0 z-10 w-1/5 min-w-[280px] h-full rounded-md rooms-sidebar dark:bg-[#3d4561] dark:bg-opacity-20 backdrop-blur-xl backdrop-brightness-95">
+    <div class="flex justify-between w-full mt-3">
+        <h1 class="justify-center inline-block dark:text-slate-200 text-base font-semibold text-left ml-16 text-zinc-600 mb-[1rem]">Rooms</h1>
+        {% if current_user.id %}
+        <span><a href="{{url_for('create_room')}}" class="inline-block px-2 py-1 ml-3 mr-3 text-sm text-center text-white duration-300 ease-in-out bg-blue-400 rounded-full shadow-lg transition-color hover:bg-blue-600 ">+ New</a></span>
+        {% endif %}
+    </div>
+    {% if rooms %}
+        {% for room in rooms %}
+            <div onclick="callRoom(event, '{{url_for('room', room_id=room.id)}}')" id="room_{{room.id}}" class="room-container w-[97%] py-4 px-5 rounded-lg mt-2 ml-1 bg-slate-600 {%if curr_room.id and room.id == curr_room.id %} bg-opacity-10 {% else %} bg-opacity-0 {% endif %} hover:bg-opacity-10 transition-all ease-in-out duration-100">
+                <div class="flex flex-row items-center justify-between justify-items-center topic-container">
+                    {% with count = room.message_count %}
+                    <span class="flex items-center justify-start text-center">
+                        <img src="{% if room.profile_photo %}{{room.profile_photo}}{% else %}../static/unknown_chat{% endif %}" alt="Chat Image" class="object-cover w-10 h-10 mr-5 border-[5px] border-solid rounded-full shadow-md border-slate-200 dark:border-slate-700 border-spacing-1 opacity-90">
+                        <h1 class="inline-block text-base font-semibold cursor-default dark:text-zinc-200 text-zinc-700">{{room.name}}</h1><h2 class="inline-block px-2 mb-1 ml-3 text-sm font-bold text-white rounded-full cursor-default bg-zinc-500">{{count}}</h2></span>
+                    <div class="flex flex-wrap items-center justify-end justify-items-end container-room-details">
+                        {% if room.author.id == current_user.id %}
+                        <div id="btn_delete_room_{{room.id}}" class="mt-1 rounded-full shadow-md opacity-40 dark:opacity-60">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
+                            <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endwith %}
+                </div>
+    
+            </div>            {% endfor %}    {% endif %}    
+</div>
+<div class="fixed top-0 left-0 z-30 items-center justify-center hidden w-full h-full px-3 py-2 rounded-lg shadow-md backdrop-blur-sm" id="confirm_section_room">
+    <div class="flex-col px-16 py-8 shadow-lg rounded-2xl bg-slate-50 dark:bg-[#202739]">
+        <p class="mb-4 text-base text-center dark:text-slate-200 text-zinc-800">Do you want to delete this room?</p>
+        <div class="flex items-center justify-center button-container">
+            <button id="yes-button-room" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-red-400 rounded-lg shadow-lg dark:bg-red-500 ">Yes</button>
+            <button id="no-button-room" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">No</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+    let currentRoomId = null;
+    document.addEventListener("DOMContentLoaded", () => {
+        let socket = io();
+        // delete confirm rooms
+        const confirm = document.getElementById("confirm_section_room");
+        const delete_btns = document.querySelectorAll("[id^='btn_delete_room_']");
+        delete_btns.forEach(button => {
+            button.addEventListener("click", () => {
+                event.stopPropagation();
+                currentRoomId = button.id.split('_').pop();
+                confirm.style.display = 'flex';
+            })
+        })
+        
+        // Room deletion from chat_info
+        const deleteCurrRoom = document.getElementById("delete-current-room");
+        if (deleteCurrRoom) {
+            deleteCurrRoom.addEventListener("click", () => {
+                event.stopPropagation();
+                currentRoomId = "{{curr_room.id}}";
+                confirm.style.display = 'flex';
+            })
+        }
+        
+        // confirm buttons
+        // use global variable currentRoomId
+        document.getElementById('no-button-room').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+        })
+        
+        document.getElementById('yes-button-room').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+            if (currentRoomId) {
+                const room = document.getElementById(`room_${currentRoomId}`);
+                fetch(`/delete_room/${currentRoomId}`, {
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({
+                        
+                    })
+                    
+                })
+                .then(response => response.json())
+                .then(data =>{
+                    if (data.status == "success" && data.id == "{{curr_room.id}}"){
+                        
+                        window.location.href = `/`;
+                    }
+                })
+                .catch(error => console.log(error));
+                // window.location.href = `/delete_room/${currentRoomId}`
+            }
+        })
+
+        // sidebar trigger area
+        // swipe handled by chat.html
+        const triggerArea = document.getElementById('trigger-area')
+        triggerArea.addEventListener("mouseover", (event) => {
+            document.getElementById('rooms-sidebar').style.transform = 'translateX(0)';
+            document.getElementById('rooms-sidebar').style.opacity = '100';
+        });
+        document.getElementById('rooms-sidebar').addEventListener("mouseleave", (event) => {
+            event.target.style.transform = 'translateX(-100%)'
+            document.getElementById('rooms-sidebar').style.opacity = '0';
+        })
+        socket.on('connect', ()=>{
+            console.log("Socketio connected")
+        })
+        socket.on('room_delete', function(msg) {
+            const room_id = msg.id;
+            const room = document.getElementById(`room_${room_id}`)
+            room.remove()
+        })
+        socket.on('new_room', function(msg) {
+            const room = msg; 
+            
+            const roomContainer = document.getElementById('rooms-sidebar');
+            const newRoom = document.createElement('div');
+            newRoom.className = "room-container w-[97%] py-4 px-5 rounded-lg mt-2 ml-1 bg-slate-600 bg-opacity-0 hover:bg-opacity-10 transition-all ease-in-out duration-100";
+            newRoom.id = `room_${room.id}`;
+            newRoom.onclick = function(event){ 
+                callRoom(event, `/room/${room.id}`); 
+            };
+            const topicContainer = document.createElement('div');
+            topicContainer.className = 'flex flex-row items-center justify-between justify-items-center topic-container';
+            const nameAndCountSpan = document.createElement('span');
+            nameAndCountSpan.className = 'text-center';
+            const roomName = document.createElement('h1');
+            roomName.className = 'inline-block text-base font-semibold text-zinc-700';
+            roomName.textContent = room.name;
+            const count = document.createElement('h2');
+            count.className = 'inline-block px-2 mb-1 ml-3 text-sm font-bold text-white rounded-full bg-zinc-500';
+            count.textContent = room.message_count;
+            nameAndCountSpan.appendChild(roomName);
+            nameAndCountSpan.appendChild(count);
+            const containerRoomDetails = document.createElement('div');
+            containerRoomDetails.className = 'flex flex-wrap items-center justify-end justify-items-end container-room-details';
+            const deleteButton = document.createElement('div');
+            deleteButton.id = `btn_delete_room_${room.id}`;
+            deleteButton.className = 'mt-1 rounded-full shadow-md opacity-40';
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.className = 'w-6 h-6';
+            svg.setAttribute('viewBox', '0 0 24 24');
+            svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'red');
+            svg.setAttribute('stroke-width', '2');
+            
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', 'M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16');
+            
+            svg.appendChild(path);
+            deleteButton.appendChild(svg);
+            if(room.author.id == '{{current_user.id}}'){
+                containerRoomDetails.appendChild(deleteButton);
+            }
+            topicContainer.appendChild(nameAndCountSpan);
+            topicContainer.appendChild(containerRoomDetails);
+            newRoom.appendChild(topicContainer);
+            roomContainer.appendChild(newRoom);        
+        });
+    })
+    
+    // loads room
+    function callRoom(event, url) {
+        if (!event.target.closest("[id^='btn_delete_room_']")){
+            window.location.href = url;
+        }
+    }
+    
+</script>
+{% endblock rooms_sidebar %}

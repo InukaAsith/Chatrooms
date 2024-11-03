@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+<form method="post" class="py-11  md:px-14 px-8 w-[95vw] md:w-full rounded-[30px] text-sm md:text-base shadow-md bg-[#f9f9f9] dark:bg-[#252c43] dark:text-zinc-200">
+    {{form.hidden_tag()}}
+    <div class="flex-col justify-center">
+        <div class="flex-row flex-wrap items-center content-center justify-around my-3">
+            <span>{{form.username.label(class="text-sm md:text-base")}} :</span>
+            <span class="ml-3">{{form.username(class="md:px-3 px-2 py-2 md:ml-3 mt-1 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+        </div>
+        <div class="flex-row flex-wrap items-center content-center justify-around my-3 my-3flex-row">
+            <span>{{form.password.label(class="text-sm md:text-base")}} :</span>
+            <span class="ml-[3.6rem]">{{form.password(class="px-2 mt-1  md:px-3 py-2 md:ml-3 text-sm rounded-lg dark:bg-[#3a4568] shadow-lg")}}</span>
+        </div>
+        {% if form.password.errors %}
+        {% for error in form.password.errors %}
+        <span class="text-sm text-red-400">{{error}}</span>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="flex justify-center mb-3">
+        <span>{{form.remember.label(class="pb-3 mb-3 mr-2 text-sm md:text-base dark:text-zinc-300 text-zinc-600")}}</span>
+        <span>{{form.remember(class="to-blue-500 ")}}</span>
+    </div>
+    <div class="flex justify-center">
+        <span>{{form.submit(class="px-5 py-2 ml-3 text-sm text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ")}}</span>
+        <span><a href="{{url_for('auth.register')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Register</a></span>
+    </div>
+    <div class="flex justify-center">
+        <a href="{{url_for('auth.forgot_password')}}" class="mt-4 text-sm text-blue-600 dark:text-blue-400">Forgot Password</a>
+    </div>
+</form>
+{% endblock %}

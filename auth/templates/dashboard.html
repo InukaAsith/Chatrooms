@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="flex flex-col items-center justify-center  m-0 py-11 md:px-14 px-5 rounded-[30px] shadow-md dark:bg-[#252c43] bg-[#f9f9f9]">
+    {% if user.profile.profile_picture.filename %}
+    <img src="{{user.profile.profile_picture.filename}}" alt="{{user.username}}" class="object-cover h-[250px] w-[250px] rounded-full shadow-xl">
+    {% else %}
+    <img src="../static/unknown_user.jpg" alt="{{user.username}}" class="object-cover md:h-[250px] h-[150px] w-[150px] md:w-[250px] rounded-full shadow-xl">
+    {% endif %}
+    <h1 class="mt-6 text-4xl font-semibold text-gray-700 md:text-5xl dark:text-gray-200">{{user.name}}</h1>
+    <h2 id="username" class="px-3 py-1 mt-2 text-sm text-gray-200 transition ease-in-out cursor-default bg-zinc-500 rounded-2xl">@{{user.username}}</h2>
+    <div class="relative">
+        <p class="max-w-[80%] min-w-[300px] flex items-center justify-center dark:text-zinc-200 dark:bg-[#3e4a6d] text-zinc-700 bg-slate-50 h-14 m-3 rounded-[20px] shadow-md">{{user.profile.bio}}</p>
+        <p class="absolute p-1 text-sm rounded-full shadow-lg dark:text-slate-200 dark:bg-[#495782] bg-slate-50 text-zinc-600 right-3 bottom-2">{% if user.gender == 'male'%}👦🏻 {% else %}👧🏻 {% endif %}{{user.age}}</p>
+    </div>
+    <div class="flex justify-center">
+        <span><a href="{{url_for('auth.edit_profile')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Edit</a></span>
+        <span><a href="{{url_for('auth.logout')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Logout</a></span>
+    </div>
+</div>
+<script>
+    const username = document.getElementById("username")
+    username.addEventListener("mouseover", () => {
+        username.textContent = "{{user.email}}"
+    })
+    username.addEventListener("mouseleave", () => {
+        username.textContent = "{{user.username}}"
+    })
+</script>
+{% endblock %}

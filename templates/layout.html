@@ -1,0 +1,121 @@
+<!-- 
+    This is the base template for the website. 
+    All the other templates will extend this one.
+    The navbar and footer are here.
+    flash messages handled here.
+    preferences page script here
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Rooms</title>
+    <link rel="icon" href="../static/icon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="../static/output.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            // ... any other configurations
+        }
+    </script> -->
+    
+</head>
+<!-- Dark mode handled by class in here. 
+    Body extends around 92vh -->
+<body id="body" class="{% if session.get('theme') != '1' %} dark bg-[#20273a] {% endif %} transition-colors ease-in-out duration-900 select-none" oncontextmenu="disableMenu(event)">
+    <nav class="md:w-full w-[100vw] nav-container h-[50px] flex justify-between items-center rounded-sm fixed dark:bg-[#20273a] dark:text-[#e2e8f0] bg-white shadow-md z-50" >
+        <h1 class="ml-4 text-lg font-bold text-zinc-700 dark:text-[#e2e8f0]"> <a href="{{url_for('index')}}"><img src="../../static/icon.png" alt="" class="inline-block w-8 h-8"> Chat Rooms</a></h1>
+        <div id="user-login" class="mr-4 cursor-pointer user-login">
+            {% if current_user.id %}
+                <span class="inline-block px-6 py-1 text-sm text-center rounded-full text-zinc-900 dark:bg-blue-500 bg-blue-400 relative w-[8rem] h-[35px] shadow-md overflow-hidden">
+                    {% if current_user.profile.profile_picture.filename %}
+                        <img src="{{current_user.profile.profile_picture.filename}}" alt="" class="object-cover absolute top-[1px] h-8 rounded-full shadow-md left-1 ">
+                    {% else %}
+                        <img src="../static/unknown_user.jpg" alt="" class="absolute top-0 object-cover h-8 rounded-full shadow-md left-2">
+                    {% endif %}
+                    <h2 class="ml-[20px]  pl-2 text-sm font-bold text-white leading-loose">{{current_user.name}}</h2>
+                </span>
+                {% else %}
+                <span class="inline-block px-6 py-1 text-sm text-center rounded-full text-white dark:bg-blue-500 bg-blue-400 relative w-[8rem] h-[35px] shadow-md overflow-hidden">
+                    <img src="../static/unknown_user.jpg" alt="" class="object-cover absolute top-[1px] h-8 rounded-full shadow-md left-1">
+                    <h2 class="ml-[20px]  pl-2 text-sm font-bold text-white leading-loose">Login</h2>
+                </span>
+                <!-- <span><a href="{{url_for('auth.login')}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg ">Login</a></span> -->
+            {% endif %}
+        </div>
+    </nav>
+    {% include 'preferences_pane.html' %}
+    <div class="body-wrapper  min-h-[94vh] bg-gradient-to-t from-[#e8f1f8] to-[#f3f8fc] dark:bg-gradient-to-t dark:from-[#1d2640] dark:to-[#151c2e] text-left flex text-xl items-center justify-center font-sans top-[50px] absolute w-full">
+        <div class="body-container">
+            {% block body %}
+            {% endblock %}
+            {% block flash_messages %}
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                        <div class="absolute z-50 flash-container left-6 bottom-7">
+                            {% for message in messages %}
+                                {% if message[0] == 'success' %}
+                                <div class="block px-10 py-4 text-lg text-white bg-green-500 rounded flash-message">{{message[1]}}</div>
+                                {% elif message[0] == 'warning' %}
+                                <div class="block px-10 py-4 text-lg text-white bg-yellow-500 rounded flash-message">{{message[1]}}</div>
+                                {% else %}
+                                <div class="block px-10 py-4 text-lg text-white bg-red-500 rounded flash-message">{{message[1]}}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+<script>
+    function disableMenu(event) {
+        event.preventDefault()
+    }
+        
+    document.addEventListener("DOMContentLoaded", () => {
+        // flash messages
+        const flash_messages = document.querySelectorAll('.flash-message, .flash-messages');
+        flash_messages.forEach(element => {
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 5000);
+            
+        });
+        const userLogin = document.getElementById("user-login"); 
+        document.addEventListener("click", (event)=>{
+            const isMenu = (preferences_pane.contains(event.target));
+            // || userLogin.contains(event.target)
+            if( !isMenu && preferences_pane.classList.contains("visible")) {
+                preferences_pane.classList.toggle('visible', false)
+                preferences_pane.classList.replace('top-[48px]','top-[-348px]');
+                preferences_pane.classList.replace('opacity-100','opacity-0');
+                event.stopPropagation();
+            }
+            
+        });
+        // preferences pane
+        const preferences_pane = document.getElementById("preferences-pane");
+        userLogin.addEventListener("click", (event)=>{
+            if(preferences_pane.classList.contains("visible")) {
+                preferences_pane.classList.toggle('visible', false)
+                preferences_pane.classList.replace('top-[48px]','top-[-348px]');
+                preferences_pane.classList.replace('opacity-100','opacity-0');
+                event.stopPropagation();
+            }
+            else {
+                preferences_pane.classList.toggle('visible', true)
+                preferences_pane.classList.replace('top-[-348px]','top-[48px]');
+                preferences_pane.classList.replace('opacity-0','opacity-100');
+                event.stopPropagation();
+            };
+        });
+    })
+</script>
+</body>
+</html>

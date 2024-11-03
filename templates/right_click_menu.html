@@ -1,0 +1,48 @@
+{% block right_click_menu %}
+<!-- right click menu in chat -->
+
+<!-- delete btn chat -->
+<div id="right-click-menu-chat" class="right-click-menu hidden z-50 w-fit dark:bg-[#252c42] bg-slate-100 dark:text-slate-200 text-zinc-800 text-base rounded-xl" style="position: fixed;">
+  <ul>
+    <div id="copy-on-context-menu" class="flex items-center justify-start w-full py-3 px-7  dark:hover:bg-[#323b58] hover:bg-slate-200 rounded-2xl">
+      <div class="h-8 p-1 mx-2 mt-1 rounded-full shadow-md opacity-70">
+        <svg class="w-6 h-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect 
+              x="30" 
+              y="30" 
+              width="45" 
+              height="45" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="8"
+              rx="4"
+          />
+          <rect 
+              x="25" 
+              y="25" 
+              width="45" 
+              height="45" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="8"
+              rx="4"
+              opacity="0.5"
+          />
+        </svg>     
+      </div>
+      <!-- Copy button in menu -->
+      <h2 class="font-semibold text-zinc-800 dark:text-slate-200">Copy</h2>
+    </div>
+    <div id="delete-on-context-menu" class="items-center justify-start hidden w-full py-3 px-7 dark:hover:bg-[#323b58] hover:bg-slate-200 rounded-2xl">
+      <div class="h-8 p-1 mx-2 mt-1 rounded-full shadow-md opacity-70">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
+        <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+        </svg>
+      </div>
+      <h2 class="font-semibold text-red-500">Delete</h2>
+    </div>
+
+  </ul>
+</div>
+
+{% endblock right_click_menu %}

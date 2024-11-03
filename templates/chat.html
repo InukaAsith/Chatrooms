@@ -1,0 +1,450 @@
+<!-- This file renders the chat page. It renders the chat_info.html, rooms_sidebar.html and right_click_menu.html templates. -->
+<!-- 
+    Handles incoming messages from socketio and appends
+    Handles message deletion
+
+    SCRIPTS INCLUDE
+    swipe to rooms menu
+    Opening room info menu
+    Showing context menu
+    message send area animations
+
+-->
+
+
+{% extends 'layout.html' %}
+{% block body %}
+{% include 'chat_info.html' %}
+{% include 'rooms_sidebar.html' %}
+{% include 'right_click_menu.html' %}
+<div class="flex items-center justify-center w-full">
+    <!-- room name -->
+    <div id="room-name" class="cursor-pointer dark:hover:bg-[#1a243b] hover:bg-slate-200 rounded-xl px-10 py-2 w-fit transition-all duration-300 justify-center text-2xl font-bold text-slate-500 relative dark:text-slate-200 top-[-30px]">{{curr_room.name}}</div>
+</div>
+<div class="h-[80vh] w-[90vw] md:w-[80vw] backdrop-brightness-90  backdrop-blur-3xl rounded-3xl shadow-lg relative">
+    <div class="chatbox-container h-[85%] overflow-y-auto select-text">
+        {% if not messages %}
+        <div id="no-message-info" class="flex flex-col items-center justify-center h-full py-8">
+            <img src="../static/Nothing.png" alt="" class="select-none md:h-[200px] h-[200px] dark:invert opacity-40">
+            <p class="ml-4 text-base font-semibold text-center opacity-50 select-none md:text-2xl dark:text-zinc-200 text-zinc-900">It's lonely here..</p>
+        </div>
+        {% else %}
+        {% for message in messages %}
+            <div id="message_{{message.id}}">
+                <!-- user message -->
+                {% if message.author_id == current_user.id %}
+                    <div class="flex justify-end px-8 pt-4">
+                        <!-- <div id="delete_btn_{{message.id}}" class="h-8 p-1 mx-2 mt-1 rounded-full shadow-md opacity-40">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
+                            <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </div> -->
+                        {% with isAdmin = False %}
+                        {% if current_user in curr_room.admins %}
+                        {% set isAdmin = True %}
+                        {% endif %}
+                        <div class="flex flex-col px-4 py-2 md:text-xl text-base font-medium dark:bg-[#2d3656] bg-blue-200 shadow-md w-fit message-container rounded-3xl dark:text-zinc-200 text-zinc-800" oncontextmenu="showMenu(event, '{{message.id}}', '{{message.author.id}}', '{{isAdmin}}')">
+                            <a href="{{url_for('profile', user_id=message.author_id)}}"><p class="text-xs font-bold md:text-sm dark:text-slate-400 text-slate-600">{{message.author.name}}</p></a>
+                            <p class="message-content">{{message.content}}</p>
+                        </div>
+                        {% endwith %}
+                        <a href="{{url_for('profile', user_id=message.author_id)}}">
+                            {% if message.author.profile.profile_picture.filename and current_user.id %}
+                            <img src="{{message.author.profile.profile_picture.filename}}" alt="" class="object-cover mt-1 ml-2 rounded-full shadow-md h-9 w-9">
+                            {% else %}
+                            <img src="../static/unknown_user.jpg" alt="" class="object-cover h-8 mt-1 ml-2 rounded-full shadow-md">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <!-- other user message -->
+                    {% else %}
+                    <div class="flex justify-start px-8 pt-4">
+                        <a href="{{url_for('profile', user_id=message.author_id)}}">
+                            {% if message.author.profile.profile_picture.filename and current_user.id %}
+                            <img src="{{message.author.profile.profile_picture.filename}}" alt="" class="object-cover mt-1 mr-2 rounded-full shadow-md h-9 w-9">
+                            {% else %}
+                            <img src="../static/unknown_user.jpg" alt="" class="object-cover mt-1 mr-2 rounded-full shadow-md h-9">
+                            {% endif %}
+                        </a>
+                        {% with isAdmin = False %}
+                        {% if (current_user == message.author or current_user == message.room.author or (current_user in message.room.admins and message.author not in message.room.admins)) %}
+                        {% set isAdmin = True %}
+                        {% endif %}
+                        <div class="flex flex-col px-4 py-2 md:text-xl text-base font-medium text-left shadow-md bg-slate-50 dark:bg-[#1d2439] dark:text-slate-200 w-fit message-container rounded-3xl text-zinc-800" oncontextmenu="showMenu(event, '{{message.id}}', '{{message.author.id}}', '{{isAdmin}}')">
+                            <a href="{{url_for('profile', user_id=message.author_id)}}"><p class="text-xs font-bold md:text-sm dark:text-slate-400 text-slate-600">{{message.author.name}}</p></a>
+                            <p class="message-content">{{message.content}}</p>
+                        </div>
+                        {% endwith %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        {% endif %}
+        {% if current_user.id %}
+        <form id="message-form" class="flex justify-center " oncontextmenu="allowMenu(event)">
+            <div id="outerDiv" class="fixed min-w-[330px] flex items-center w-1/4 h-16 transition-all duration-500 ease-out rounded-full shadow-md message-container bottom-9 bg-slate-200 dark:bg-[#2d3757]">
+                {{form.hidden_tag()}}
+                {{form.message(id="messageInput", placeholder="Enter message", autocomplete='off', class=" min-w-[200px] w-[90%] transition-all duration-500 ease-in-out pl-6 text-left absolute  dark:text-zinc-200 outline-none h-[80%] rounded-3xl shadow-sm right-4 border-none message-container dark:bg-[#182037] bg-white")}}
+                {{form.submit(id="sendBtn",class="absolute px-4 py-2 text-sm text-white bg-blue-500 rounded-full right-5")}}
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+<!-- delete confirm html -->
+<div class="fixed top-0 left-0 items-center justify-center hidden w-full h-full px-3 py-2 rounded-lg shadow-md backdrop-blur-sm" id="confirm_section">
+    <div class="flex-col px-16 py-8 shadow-lg rounded-2xl dark:bg-[#202739] bg-slate-50">
+        <p class="mb-4 text-base text-center dark:text-zinc-200 text-zinc-800">Do you want to delete this message?</p>
+        <div class="flex items-center justify-center button-container">
+            <button id="yes-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-red-400 rounded-lg shadow-lg dark:bg-red-500 ">Yes</button>
+            <button id="no-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">No</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // adding new message element on new message
+    let socket = io();
+    socket.on('connect', function() {
+        socket.emit('join', {room: '{{curr_room.id}}'});
+    })
+    socket.on('new_message', function(message) {
+        document.querySelector("#no-message-info")?.remove();
+        const messageContainer = document.createElement('div');
+        messageContainer.id = `message_${message.id}`;
+
+        const isCurrentUser = message.author.id == "{{current_user.id}}";
+        const flexDirection = isCurrentUser ? 'justify-end' : 'justify-start';
+
+        messageContainer.className = `flex ${flexDirection} px-8 pt-4`;
+
+        if (isCurrentUser) {
+        // messageContainer.appendChild(createDeleteButton(message.id));
+        } else {
+        messageContainer.appendChild(createProfilePicture(message.author));
+        }
+
+        const messageContent = document.createElement('div');
+        messageContent.className = `flex flex-col px-4 py-2 ${isCurrentUser ? 'md:text-xl text-base bg-blue-200 dark:bg-[#2d3656] dark:text-zinc-200' : 'md:text-lg text-base dark:bg-[#1d2439] dark:text-slate-200 bg-slate-50'} font-medium shadow-md w-fit message-container rounded-3xl text-zinc-800`;
+        const isAdmin = 'False';
+        if (message.author in message.room.admins) {
+            isAdmin = 'True';
+        }
+        messageContent.setAttribute('oncontextmenu', `showMenu(event, '${message.id}'), '${message.author.id}, '${isAdmin}`);
+        const authorLink = document.createElement('a');
+        authorLink.href = `/profile/${message.author.id}`;
+        const authorName = document.createElement('p');
+        authorName.className = 'text-xs md:text-sm dark:text-slate-400 font-bold text-slate-600';
+        authorName.textContent = message.author.name;
+        authorLink.appendChild(authorName);
+        
+        const content = document.createElement('p');
+        content.className = 'message-content';
+        content.textContent = message.content;
+
+        messageContent.appendChild(authorLink);
+        messageContent.appendChild(content);
+
+        messageContainer.appendChild(messageContent);
+
+        if (isCurrentUser) {
+        messageContainer.appendChild(createProfilePicture(message.author));
+        }
+
+        chatboxContainer = document.querySelector('.chatbox-container');
+        chatboxContainer.appendChild(messageContainer);
+        if (isCurrentUser) {
+            chatboxContainer.scrollTop = chatboxContainer.scrollHeight;
+        }
+    });
+            
+    // function createDeleteButton(messageId) {
+    //     const deleteButton = document.createElement('div');
+    //     deleteButton.id = `delete_btn_${messageId}`;
+    //     deleteButton.className = 'h-8 p-1 mx-2 mt-1 rounded-full shadow-md opacity-40';
+    
+    //     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    //     svg.setAttribute('class', 'w-6 h-6');
+    //     svg.setAttribute('viewBox', '0 0 24 24');
+    //     svg.setAttribute('fill', 'none');
+    //     svg.setAttribute('stroke', 'red');
+    //     svg.setAttribute('stroke-width', '2');
+    
+    //     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    //     path.setAttribute('d', 'M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16');
+    
+    //     svg.appendChild(path);
+    //     deleteButton.appendChild(svg);
+    //     const confirm_ = document.getElementById("confirm_section");
+    //     deleteButton.addEventListener("click", () => {
+    //             event.stopPropagation();
+    //             currentMessageId = messageId;
+    //             confirm_.style.display = 'flex';
+    //         })
+    //     return deleteButton;
+    // }
+    
+    function createProfilePicture(author) {
+        const profilePicture = author.profile.profile_picture;
+        const imageUrl = profilePicture && profilePicture.filename
+        ? `${profilePicture.filename}`
+        : '../static/unknown_user.jpg';
+    
+        const link = document.createElement('a');
+        link.href = `/profile/${author.id}`;
+    
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.alt = '';
+        img.className = `mt-1 ${author.id == "{{current_user.id}}" ? 'ml-2' : 'mr-2'} rounded-full shadow-md h-9 object-cover`;
+    
+        link.appendChild(img);
+        return link;
+    }
+
+    // right click menu show function
+    function showMenu(event, messageId, authorId, isAdmin) {
+            const menuRightClick = document.getElementById("right-click-menu-chat");
+            if (menuRightClick) {
+                event.preventDefault();
+                menuRightClick.style.display = 'block';
+                menuRightClick.style.left = event.clientX + "px";
+                menuRightClick.style.top = event.clientY + "px";
+                menuRightClick.dataset.messageId = messageId;
+                if ('{{current_user.id}}' == authorId || isAdmin == 'True'){
+                    document.getElementById("delete-on-context-menu").style.display = 'flex';
+                }
+            }
+            
+        }
+    
+    function allowMenu(event) {
+        event.stopPropagation();
+    }
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+        
+        // swipe for rooms menu
+        
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        
+        const threshold = 100; // Minimum distance for swipe
+        const edgeThreshold = 100; // Distance from left edge to start swipe
+        
+        function handleSwipe() {
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            
+            // Check if swipe is more horizontal than vertical
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                if (deltaX > threshold && touchStartX < edgeThreshold) {
+                    toggleLeftMenu();
+                }
+            }
+        }
+        
+        // trigger rooms sidebar
+        const rooms_sidebar = document.getElementById('rooms-sidebar');
+        function toggleLeftMenu() {
+            rooms_sidebar.style.transform = 'translateX(0)';
+            rooms_sidebar.style.opacity = '100';
+        }
+        document.addEventListener("click", (event)=>{
+            const isMenu = (rooms_sidebar.contains(event.target));
+            if (!isMenu) {
+                rooms_sidebar.style.transform = 'translateX(-100%)';
+                rooms_sidebar.style.opacity = '0';
+            }
+        });
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        });
+        
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].clientX;
+            touchEndY = e.changedTouches[0].clientY;
+            handleSwipe();
+        });
+        
+        // Prevent default touchmove behavior to avoid browser back/forward actions
+        document.addEventListener('touchmove', e => {
+            if (touchStartX < edgeThreshold) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        
+        
+        // Message delete confirmation
+        
+        const chatboxContainer = document.querySelector(".chatbox-container");
+        
+        socket.on('message_delete', function(data) {
+            const message = document.getElementById(`message_${data.id}`);
+            message.remove();
+        })
+        
+        
+        const confirm = document.getElementById("confirm_section");
+
+
+        // adding delete btns
+        // const delete_btns = document.querySelectorAll("[id^='delete_btn_']");
+        // delete_btns.forEach(button => {
+        //     button.addEventListener("click", () => {
+        //         event.stopPropagation();
+        //     currentMessageId = button.id.split('_').pop();
+        //     confirm.style.display = 'flex';
+        //     })
+        // })
+    
+        // context menu copy
+        const copyMenu = document.getElementById("copy-on-context-menu")
+        if (copyMenu) {
+            copyMenu.addEventListener("click", (event) => {
+                const message_id = document.getElementById("right-click-menu-chat").dataset.messageId;
+                navigator.clipboard.writeText(document.querySelector(`#message_${message_id} p.message-content`).textContent);
+            })
+        }
+       
+        // delete message
+        rightMenuDelete = document.getElementById("delete-on-context-menu")
+        if (rightMenuDelete) {
+            rightMenuDelete.addEventListener("click", (event) => {
+                currentMessageId = document.getElementById("right-click-menu-chat").dataset.messageId;
+                confirm.style.display = 'flex';
+            })
+        }
+        
+
+
+        document.getElementById('no-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+        })
+        
+        document.getElementById('yes-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+            if (currentMessageId) {
+                const room = document.getElementById(`room_${currentMessageId}`);
+                fetch(`/delete_message/${currentMessageId}`, {
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({
+                        
+                    })
+                    
+                })
+                .then(response => response.json())
+                .then(data => () => {
+                    
+                })
+                .catch(error => console.log(error));
+                // window.location.href = `/delete_room/${currentMessageId}`
+            }
+        })
+        
+        // Message send area animations
+        
+        const outerDiv = document.getElementById('outerDiv');
+        const messageInput = document.getElementById('messageInput');
+        if (messageInput){
+            messageInput.addEventListener('focus', () => {
+                outerDiv.style.width = '50vw';
+                messageInput.style.width = 'calc(100% - 2rem)';
+            });
+            
+            messageInput.addEventListener('blur', (event) => {
+                if (!event.relatedTarget || event.relatedTarget.id !== "sendBtn"){
+                    outerDiv.style.width = '25%';
+                    outerDiv.style.minWidth = '330px';
+                    messageInput.style.width = '90%';
+                    messageInput.style.minWidth = '200px';
+                }
+            });
+            const form = document.getElementById("message-form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const message = messageInput.value;
+                const token = document.querySelector('input[name="csrf_token"]').value;
+                fetch('/send_message/{{curr_room.id}}', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/x-www-form-urlencoded',
+                        'X-CSRFToken': token
+                    },
+                    body: 'message='+ encodeURIComponent(message) + '&csrf_token=' + encodeURIComponent(token)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('messageInput').value = ""
+                    } else {
+                        console.error('Error:', data.errors)
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                });
+            })
+        };
+        
+        // prevent scrolling when menu active
+        document.addEventListener("wheel", (event) => {
+            const rightMenu = document.querySelector(".right-click-menu");
+            if (rightMenu && rightMenu.style.display === "block") {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener("touchmove", (event) => {
+            const rightMenu = document.querySelector(".right-click-menu");
+            if (rightMenu && rightMenu.style.display === "block") {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+
+
+
+        // open right click menu
+        document.addEventListener('touchstart', function(event) {
+            const menuRightClick = document.querySelector(".right-click-menu");
+            if (menuRightClick) {
+                if (!(menuRightClick.contains(event.target))) {
+                    menuRightClick.style.display = 'none';
+                }
+            }
+        });
+        
+        
+        document.addEventListener('click', function() {
+            const menuRightClick = document.querySelector(".right-click-menu");
+            if (menuRightClick) {
+                menuRightClick.style.display = 'none';
+            }
+        });
+        
+        //  Open room info menu
+        const roomInfo = document.getElementById("room-info-section");
+        const roomName = document.getElementById("room-name");
+        roomName.addEventListener("click", (event) => {
+            event.stopPropagation();
+            roomInfo.classList.replace("h-0", "h-full");
+            roomInfo.classList.replace("-z-30", "z-30");
+            roomInfo.classList.replace("opacity-0", "opacity-100");
+        })
+
+    })
+
+    
+</script>
+
+{% endblock body %}

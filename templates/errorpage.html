@@ -1,0 +1,26 @@
+<!-- Extending the layout template -->
+{% extends 'layout.html' %}
+{% block body %}
+
+{% if error_code %}
+<!-- Error container -->
+<div class="flex flex-col items-center justify-center md:w-fit  m-0 py-11 md:px-14 px-5 rounded-[30px] shadow-md dark:bg-[#252c43] bg-[#f9f9f9]">
+    
+    <!-- Error image -->
+    <img src="/static/error.png" alt="{{error_code}}" class="h-[250px] w-[250px] rounded-full shadow-xl">
+    
+    <!-- Error message -->
+    <h1 class="mt-6 text-4xl font-semibold text-gray-700 md:text-5xl dark:text-gray-200">{% if error_details %}{{error_details}}{% else %} Unknown Error {% endif %}</h1>
+    
+    <!-- Error code display -->
+    <h2 id="code_error" class="px-4 py-2 mt-2 text-lg font-bold text-gray-200 transition ease-in-out bg-red-500 cursor-default rounded-2xl">{{error_code}}</h2>
+    
+    <!-- Exception message or fallback -->
+    <p class="md:max-w-[50%] min-w-[300px] flex items-center justify-center px-5 py-3  dark:bg-[#3d496c] text-red-700 dark:text-red-200 bg-slate-50 h-fit m-3 rounded-md shadow-sm">{% if exception %}{{exception}}{% else %} Please try again later {% endif %}</p>
+    
+</div>
+{% else %}
+{% endif %}
+
+{% endblock %}
+

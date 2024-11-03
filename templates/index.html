@@ -1,0 +1,15 @@
+<!-- 
+    This is the homepage template. It extends the layout.html template.
+    The `block body` is used to define the content of the page.
+    The `include` statement is used to include the rooms.html template.
+    The rooms.html template is used to display all the rooms.
+    The `block rooms` is used to define the content of the rooms.html template.
+-->
+
+{% extends "layout.html" %}
+{% block body %}
+
+{% include 'rooms.html' %}
+{% block rooms %}
+{% endblock rooms %}
+{% endblock body %}

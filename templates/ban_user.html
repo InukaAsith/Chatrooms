@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class=" dark:bg-[#252c43] flex-col items-start justify-start text-left py-11 md:px-14 px-8 w-[92vw] md:w-full dark:text-zinc-200 rounded-[30px] shadow-md bg-[#f9f9f9]">
+    <div class="w-full" id="participant-section">
+        <h2 class="mt-3 text-lg font-semibold md:mt-4 md:text-xl text-slate-700 dark:text-slate-200">Select Participant</h2>
+        <div class="max-h-[30vh] w-full overflow-y-auto mt-2 rounded-3xl dark:bg-[#323c5a] bg-slate-200 dark:text-slate-200 text-zinc-700 px-8 py-4">
+            {% for participant in room.participants %}
+            {% if not participant in room.admins %}
+            <div id="user_{{participant.id}}" onclick="banUser(event,'{{participant.id}}', '{{room.id}}' )" class="flex items-center justify-between w-full hover:dark:bg-[#3d486b] px-4 text-base rounded-xl my-1 py-2 hover:bg-slate-100">
+                <span class="flex items-center justify-start">
+                    {% if participant.profile.profile_picture.filename and current_user.id %}
+                    <img src="{{participant.profile.profile_picture.filename}}" alt="Profile Photo" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% else %}
+                    <img src="../static/unknown_user.jpg" alt="" class="object-cover mr-5 rounded-full shadow-md w-7 h-7 opacity-90">
+                    {% endif %}
+                    <h2>{{participant.name}}</h2>
+                </span>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+</div>
+<div class="flex justify-center mt-3">
+    <span><a href="{{request.referrer}}" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">Cancel</a></span>
+</div>
+</div>
+<div class="fixed top-0 left-0 items-center justify-center hidden w-full h-full px-3 py-2 rounded-lg shadow-md backdrop-blur-sm" id="confirm_section">
+    <div class="flex-col px-16 py-8 shadow-lg rounded-2xl dark:bg-[#202739] bg-slate-50">
+        <p class="mb-4 text-base text-center dark:text-zinc-200 text-zinc-800">Ban User?</p>
+        <div class="flex items-center justify-center button-container">
+            <button id="yes-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-red-400 rounded-lg shadow-lg dark:bg-red-500 ">Yes</button>
+            <button id="no-button" class="inline-block px-5 py-2 ml-3 text-sm text-center text-white bg-blue-400 rounded-lg shadow-lg dark:bg-blue-500 ">No</button>
+        </div>
+    </div>
+</div>
+<script>
+    let current_chat_json = null;
+    document.addEventListener("DOMContentLoaded", () => {
+        const confirm = document.getElementById("confirm_section");
+        document.getElementById('no-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+        });
+        
+        document.getElementById('yes-button').addEventListener("click", (event)=>{
+            event.stopPropagation();
+            confirm.style.display = 'none';
+            if (current_chat_json) {
+                const user_id = current_chat_json.user_id;
+                const room_id = current_chat_json.room_id;
+                fetch(`/ban_user/${room_id}`, {
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(current_chat_json)
+                    
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const adminUser= document.querySelector(`#user_${user_id}`);
+                        if (adminUser) {
+                            adminUser.remove();
+                        }
+                    }
+                })
+                .catch(error => console.log(error));
+            }
+        })
+    });
+    function banUser(event, user_id, room_id){
+        event.preventDefault();
+        const confirm = document.getElementById("confirm_section");
+        current_chat_json = {
+            "user_id":user_id,
+            "room_id":room_id
+        }
+        confirm.style.display = 'flex';
+        
+
+    }
+</script>
+
+{% endblock body %}

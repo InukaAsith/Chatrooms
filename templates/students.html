@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+    {% block body %}
+    {% if students %}
+        <h1>Students</h1><br>
+        <ol>
+            {% for student in students %}
+                <li>{{student.name}} - {{student.age}}</li>    
+                <img src="{{student.profile.profile_picture.filename}}" alt="{{student.name}}" style="width: 250px; height: 250px; margin: 1rem;">
+            {% endfor %}
+        </ol>
+    {% endif %}
+{% endblock %}
